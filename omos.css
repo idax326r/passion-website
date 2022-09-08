@@ -2,14 +2,12 @@
 .meet {
   display: grid;
   place-items: center center;
-  background-color: white;
   border: 1px solid red;
   margin: 50px;
   padding: 50px;
 }
-.learn {
+.learn-button {
   border: 1.5px var(--green-color);
-  background-color: white;
   color: var(--green-color);
   padding: 8px 10px;
   text-align: center;
@@ -20,4 +18,20 @@
 .billedgalleri img {
   max-width: 50%;
   max-height: 50%;
+}
+.omos {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 50px;
+}
+@media screen and (min-width: 760px) {
+  .omos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px;
+  }
+  .meet {
+    margin: 250px;
+    padding: 50px;
+  }
 }
