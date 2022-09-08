@@ -1,0 +1,19 @@
+/* OM OS SIDE CSS */
+.meet {
+  display: grid;
+  place-items: center center;
+  background-color: white;
+  border: 1px solid red;
+  margin: 50px;
+  padding: 50px;
+}
+.learn {
+  border: 1.5px var(--green-color);
+  background-color: white;
+  color: var(--green-color);
+  padding: 8px 10px;
+  text-align: center;
+  margin: 8px 10px;
+  cursor: pointer;
+  border-style: solid;
+}
