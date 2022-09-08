@@ -8,13 +8,49 @@
 }
 html {
   --primary-color: #d67b21;
+  --background-color: #efeeea;
+  --green-color: #9cc298;
   --hover-color: ;
 }
+@font-face {
+  font-family: "";
+  src: url() format(woff2);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
 h1 {
+  color: var(--primary-color);
 }
 h2 {
 }
 h3 {
 }
 p {
+}
+footer {
+}
+header {
+}
+
+/* OM OS SIDE CSS */
+.meet {
+  display: grid;
+  place-items: center center;
+  background-color: white;
+  border: 1px solid red;
+  margin: 50px;
+  padding: 50px;
+}
+.learn {
+  border: 1.5px var(--green-color);
+  background-color: white;
+  color: var(--green-color);
+  padding: 8px 10px;
+  text-align: center;
+  margin: 8px 10px;
+  cursor: pointer;
+  border-style: solid;
 }
