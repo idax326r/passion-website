@@ -17,3 +17,7 @@
   cursor: pointer;
   border-style: solid;
 }
+.billedgalleri img {
+  max-width: 50%;
+  max-height: 50%;
+}
