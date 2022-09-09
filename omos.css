@@ -1,4 +1,11 @@
 /* OM OS SIDE CSS */
+
+html {
+  --primary-color: #d67b21;
+  --background-color: #efeeea;
+  --green-color: #9cc298;
+  --hover-color: ;
+}
 .meet {
   display: grid;
   place-items: center center;
@@ -33,5 +40,59 @@
   .meet {
     margin: 250px;
     padding: 50px;
+  }
+}
+
+/* header */
+.banner {
+  padding: 2rem;
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+}
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none; /* Skjul knappen som standard */
+}
+.logo img {
+  max-width: 10%;
+  background-size: cover;
+}
+@media (max-width: 650px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    gap: 5px;
+    border-top: 2px solid var(--green-color);
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
   }
 }
