@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+
+    <style>
+        #holder{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+            gap: 20px;
+
+        }
+        article{
+            border:  solid black 5px;
+            padding: 20px;
+        }
+img{
+    max-width: 100%;
+}
+    </style>
+</head>
+<body>
+
+<main id="holder"></main>
+<template>
+    <article>
+        <h2 class="fornavn"></h2>
+        <img src="" alt="">
+        <p class="efternavn"></p>
+        
+    </article>
+</template>
+
+
+    <script>
+        const endpoint="https://delight-6272.restdb.io/rest/restauranter";
+        const mereinfo={
+            headers:{
+                "x-apikey": "631b0361fdc15b0265f17265"
+            }
+        };
+
+        async function hentData(){
+        
+        const response=await fetch(endpoint, mereinfo);
+        const json=await response.json();
+        vis(json);}
+
+        function vis(json){
+            const holder =document.querySelector("#holder");
+            const skabelon = document.querySelector("template").content;
+
+            json.forEach(person => {
+                 
+            console.log(person);
+             const klon  =skabelon.cloneNode(true);
+             klon.querySelector(".fornavn").textContent=person.navn;
+             klon.querySelector("img").src = "billeder/" + person.billede;
+             klon.querySelector(".efternavn").textContent=`Efternavn: ${person.maden}`;
+             holder.appendChild(klon);
+            });
+        }
+            
+        hentData();
+
+    </script>
+</body>
+</html>
