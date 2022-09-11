@@ -6,25 +6,49 @@ html {
   --green-color: #9cc298;
   --hover-color: ;
 }
+
+h1 {
+  font-size: 25px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 20px;
+}
+p {
+  max-width: 65ch;
+  font-family: "Work Sans", sans-serif;
+  line-height: 25px;
+}
+ul li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
 .meet {
   display: grid;
   place-items: center center;
   margin: 30px;
   padding: 30px;
 }
+.meet p {
+  /* font-size: 1rem; */
+}
+
 .learn-button {
   border: 1.5px var(--primary-color);
   color: var(--primary-color);
   padding: 8px 10px;
   text-align: center;
-  margin: 8px 10px;
+  margin: 22px 10px;
+  padding: 15px 35px 15px 35px;
   cursor: pointer;
   border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
 }
-.billedgalleri img {
-  max-width: 50%;
-  max-height: 50%;
+.learn-button:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
+
 .omos {
   display: grid;
   grid-template-columns: 1fr;
@@ -35,15 +59,16 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 100px;
+    gap: 50px;
   }
   .meet {
-    margin: 250px;
     padding: 50px;
   }
 }
 
 /* header */
 .banner {
+  /* display: flex; */
   padding: 2rem;
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   flex-wrap: wrap;
@@ -68,9 +93,8 @@ html {
   cursor: pointer;
   display: none; /* Skjul knappen som standard */
 }
-.logo img {
+.logo {
   max-width: 10%;
-  background-size: cover;
 }
 
 /* newsletter styling */
@@ -87,7 +111,7 @@ html {
   margin-top: 100px;
 }
 .newsletter h1 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-style: italic;
 }
 .newsletter hr {
@@ -106,8 +130,9 @@ html {
   margin-bottom: 10px;
   outline: none;
   box-sizing: border-box;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
+  font-family: "Work Sans", sans-serif;
 }
 ::placeholder {
   color: rgb(124, 124, 124);
@@ -117,10 +142,12 @@ html {
   height: 50px;
   background-color: var(--primary-color);
   color: white;
+  font-size: 1rem;
   padding: 0px 28px;
   cursor: pointer;
   transition: 0.5s;
   flex-shrink: 0;
+  font-family: "Work Sans", sans-serif;
 }
 /* .newsletter button:hover {
   background-color: var(--primary-color);
@@ -143,6 +170,7 @@ input[type="checkbox"] {
   display: flex;
   gap: 0.7rem;
   width: 400px;
+  font-family: "Work Sans", sans-serif;
 }
 @media (min-width: 800px) {
   .newsletter {
@@ -158,9 +186,21 @@ input[type="checkbox"] {
     margin-top: 200px;
     display: block;
   }
+  .newsletter hr {
+    width: 200px;
+  }
   .wrap {
     display: flex;
     justify-content: center;
+  }
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    flex-shrink: 0;
+    margin-top: 4px;
+    margin-left: 35px;
+    border: 1px solid var(--primary-color);
   }
 }
 
