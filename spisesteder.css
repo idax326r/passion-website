@@ -1,0 +1,187 @@
+/* SPISESTEDER SIDE CSS */
+
+html {
+    --primary-color: #d67b21;
+    --background-color: #efeeea;
+    --green-color: #9cc298;
+    --hover-color: ;
+  }
+
+
+
+main {
+    margin-inline: 1.3rem;
+}  
+
+
+h1 {
+    font-size: 25px;
+    font-family: "Abril Fatface", cursive;
+    margin-bottom: 20px;
+  }
+
+h2{
+    font-family: "Work Sans", sans-serif;
+    color: #d67b21;
+    font-size: 160%;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+h4, h5, p{
+    font-family: "Work Sans", sans-serif;
+    color: black;
+}
+
+.spisesteder_box {
+    border: solid black 1px;
+}
+
+
+.se_mere {
+    border: 2px;
+    padding: 8px 10px;
+    text-align: center;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+    border-style: solid;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+
+.lokation_buttons {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+}
+
+
+.sorter_container {
+    margin-bottom: 3rem;
+}
+
+.sorter_buttons button{
+    color: #d67b21;
+    border: 2px;
+    padding: 8px 10px;
+    text-align: center;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+    border-style: solid;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem; 
+}
+
+.sorter_buttons {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5px;
+}
+
+
+.spisesteder_container {
+display: grid;
+grid-template-columns: 1fr;
+gap: 5px;
+}
+
+.spisesteder_box {
+    padding: 1.5rem;
+}
+
+.adresse_prisklasse {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.5rem;
+}
+
+.prisklasse_container, .adresse_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adresse_prisklasse img {
+    width: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* header */
+
+  ul li {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+  }
+
+  .banner {
+    /* display: flex; */
+    padding: 2rem;
+    /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--primary-color);
+  }
+
+  .main-menu ul {
+    list-style: none;
+    padding: 0;
+    /* 2. Få elementerne til at stå ved siden af hinanden */
+    display: flex;
+    gap: 50px;
+    justify-content: end;
+  }
+
+  /* ----------- burgermenu -------------- */
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none; /* Skjul knappen som standard */
+  }
+  .logo {
+    max-width: 10%;
+  }
+  
+
+
+  
+  @media (max-width: 650px) {
+    .toggle-btn {
+      display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    }
+  
+    .main-menu {
+      display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+    }
+  
+    .main-menu ul {
+      display: none; /* Fjern menu-listen som standard */
+    }
+  
+    .main-menu.shown ul {
+      /* Vis menu-listen, når klassen ".shown" er til stede */
+      gap: 5px;
+      border-top: 2px solid var(--green-color);
+      padding-top: 1rem;
+      display: flex;
+      flex: 1 1 100%;
+      flex-flow: column;
+    }
+  }
+  
