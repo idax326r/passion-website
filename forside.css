@@ -1,0 +1,247 @@
+html {
+  --primary-color: #d67b21;
+  --background-color: #efeeea;
+  --green-color: #9cc298;
+  --hover-color: ;
+}
+
+section {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* header */
+.banner {
+  padding: 2rem;
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+}
+/* ----------- burgermenu -------------- */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none; /* Skjul knappen som standard */
+}
+.logo img {
+  max-width: 10%;
+  background-size: cover;
+}
+
+/* INDHOLD PÅ SIDEN */
+.stort_logo {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+.footer_line {
+  height: 1px;
+  background: var(--primary-color);
+  width: 85%;
+  margin: 0 auto;
+}
+
+.footer_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_left {
+  padding: 30px;
+  line-height: 25px;
+  /* place-self: start; */
+}
+
+.footer_right {
+  padding: 30px;
+  line-height: 25px;
+  /* place-self: start end; */
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  background-image: linear-gradient(#d67b21, #d67b21);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+footer a:hover,
+a:focus,
+a:active {
+  background-size: 100% 0.1em;
+}
+
+header a:hover,
+a:focus,
+a:active {
+  background-size: 100% 0.1em;
+}
+
+.footer_rettigheder {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  letter-spacing: 18px;
+}
+
+.pil {
+  border: solid #d67b21;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  right: 50%;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.top_5 {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+figcaption {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  transform: translateY(-15px);
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+}
+
+button {
+  border: 1.5px var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 10px;
+  text-align: center;
+  margin: 22px 0px;
+  padding: 15px 35px 15px 35px;
+  cursor: pointer;
+  border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  color: var(--primary-color);
+}
+
+h4 {
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  color: var(--primary-color);
+}
+
+h5 {
+  font-size: 10px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+}
+
+.del_1 {
+  margin: 100px 30px 100px 30px;
+  gap: 30px;
+}
+
+.img_del_1 {
+  margin-top: 100px;
+}
+
+.del_2 {
+  background-color: white;
+  padding: 30px;
+  margin: 200px 0 200px 0;
+  text-align: center;
+}
+
+.folkene_bag {
+  margin-top: 50px;
+}
+
+.del_3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 30px 200px 30px;
+  gap: 30px;
+}
+
+@media (min-width: 800px) {
+  .del_1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 200px 30px 0 30px;
+    gap: 30px;
+  }
+
+  .del_2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+    margin: 200px 0 200px 0;
+    text-align: center;
+  }
+
+  .del_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 30px 200px 30px;
+    gap: 30px;
+  }
+
+  .folkene_bag {
+    margin-top: 0px;
+  }
+
+  .img_del_1 {
+    margin-top: 0px;
+  }
+}
