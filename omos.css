@@ -1,37 +1,229 @@
 /* OM OS SIDE CSS */
+
+html {
+  --primary-color: #d67b21;
+  --background-color: #efeeea;
+  --green-color: #9cc298;
+  --hover-color: ;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 20px;
+}
+p {
+  max-width: 65ch;
+  font-family: "Work Sans", sans-serif;
+  line-height: 25px;
+}
+ul li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
 .meet {
   display: grid;
   place-items: center center;
-  border: 1px solid red;
-  margin: 50px;
-  padding: 50px;
+  margin: 30px;
+  padding: 30px;
 }
+.meet p {
+  /* font-size: 1rem; */
+}
+
 .learn-button {
-  border: 1.5px var(--green-color);
-  color: var(--green-color);
+  border: 1.5px var(--primary-color);
+  color: var(--primary-color);
   padding: 8px 10px;
   text-align: center;
-  margin: 8px 10px;
+  margin: 22px 10px;
+  padding: 15px 35px 15px 35px;
   cursor: pointer;
   border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
 }
-.billedgalleri img {
-  max-width: 50%;
-  max-height: 50%;
+.learn-button:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
+
 .omos {
   display: grid;
   grid-template-columns: 1fr;
   margin: 50px;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 1000px) {
   .omos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 100px;
+    gap: 50px;
   }
   .meet {
-    margin: 250px;
     padding: 50px;
+  }
+}
+
+/* header */
+.banner {
+  /* display: flex; */
+  padding: 2rem;
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+}
+/* ----------- burgermenu -------------- */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none; /* Skjul knappen som standard */
+}
+.logo {
+  max-width: 10%;
+}
+
+/* newsletter styling */
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #ebe7d8;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 450px;
+  padding: 30px 30px;
+  color: rgb(124, 124, 124);
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.newsletter h1 {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.newsletter hr {
+  width: 100px;
+  height: 3px;
+  margin: 15px auto;
+  border: 0;
+  background: var(--primary-color);
+}
+.newsletter input {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 75%;
+  height: 50px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+::placeholder {
+  color: rgb(124, 124, 124);
+}
+.newsletter button {
+  border: 3px solid var(--primary-color);
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  padding: 0px 28px;
+  cursor: pointer;
+  transition: 0.5s;
+  flex-shrink: 0;
+  font-family: "Work Sans", sans-serif;
+}
+/* .newsletter button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+} */
+.wrap {
+  display: flex;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  flex-shrink: 0;
+  margin-top: 4px;
+  margin-left: -1px;
+  border: 1px solid var(--primary-color);
+}
+.checkbox {
+  text-align: start;
+  display: flex;
+  gap: 0.7rem;
+  width: 400px;
+  font-family: "Work Sans", sans-serif;
+}
+@media (min-width: 800px) {
+  .newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background: #ebe7d8;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 50px 30px;
+    color: rgb(124, 124, 124);
+    margin-bottom: 200px;
+    margin-top: 200px;
+    display: block;
+  }
+  .newsletter hr {
+    width: 200px;
+  }
+  .wrap {
+    display: flex;
+    justify-content: center;
+  }
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    flex-shrink: 0;
+    margin-top: 4px;
+    margin-left: 35px;
+    border: 1px solid var(--primary-color);
+  }
+}
+
+@media (max-width: 650px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    gap: 5px;
+    border-top: 2px solid var(--green-color);
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
   }
 }

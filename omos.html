@@ -4,24 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="generel.css" />
     <link rel="stylesheet" href="omos.css" />
     <title>Om os</title>
   </head>
   <body>
     <main>
-      <header></header>
+      <header class="banner">
+        <div class="logo">
+          <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
+        </div>
+        <nav class="main-menu">
+          <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
+          <ul>
+            <li><a href="spisesteder.html">Spisesteder</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="omos.html">Om os</a></li>
+          </ul>
+        </nav>
+      </header>
       <section class="meet">
         <h1>Mød delight guide</h1>
         <p>Vores ambition er at dele vores københavnske madoplevelser med andre nysgerrige madentusiaster. Vi inviterer folk til at følge med i vores guide, som beskriver mad, stemning, stil og kvalitet ved de forskellige spisesteder i Københavnområdet.</p>
         <button class="learn-button">Lær os at kende</button>
       </section>
       <article class="omos">
-        <h2>Om os</h2>
-        <p>Vi startede The Delight Guide, fordi vi selv sætter enormt stor pris på gode madoplevelser, og deler en fælles passion for et univers hvor mad og stemning går hånd i hånd. Vi mener at der er en restaurant efter enhver stemning - det gælder bare om at finde den rette. I Delight Guide giver vi vores bud på gode restauranter opdelt efter bydele. Vores horisont bliver udvidet og vi opdaterer løbende på bloggen.</p>
+        <img class="item-left" src="omos.webp" alt="piger der spiser og er glade" />
+        <div class="item-right">
+          <h1>Om os</h1>
+          <p>Vi startede The Delight Guide, fordi vi selv sætter enormt stor pris på gode madoplevelser, og deler en fælles passion for et univers hvor mad og stemning går hånd i hånd. Vi mener at der er en restaurant efter enhver stemning - det gælder bare om at finde den rette. I Delight Guide giver vi vores bud på gode restauranter opdelt efter bydele. Vores horisont bliver udvidet og vi opdaterer løbende på bloggen.</p>
+        </div>
       </article>
+      <div class="newsletter">
+        <div>
+          <h1>Tilmeld dig vores nyhedsbrev her!</h1>
+          <hr />
+        </div>
+        <form>
+          <div class="wrap">
+            <input type="email" placeholder="Din e-mail" required />
+            <button type="submit">Tilmeld</button>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="conditions" />
+            <label for="conditions">Ja, jeg vil gerne modtage spændende nyheder fra the Delight Guide!</label>
+          </div>
+        </form>
+      </div>
       <div class="billedgalleri">
-        <img src="ravage.webp" alt="" />
+        <img src="" alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
@@ -29,6 +66,7 @@
         <img src="" alt="" />
       </div>
       <footer></footer>
+      <script src="header.js"></script>
     </main>
   </body>
 </html>
