@@ -84,7 +84,7 @@ ul li:hover {
 
 /* header */
 .banner {
-  /* display: flex; */
+  display: flex;
   padding: 2rem;
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   flex-wrap: wrap;
@@ -98,6 +98,7 @@ ul li:hover {
   display: flex;
   gap: 50px;
   justify-content: end;
+  padding: 35px;
 }
 /* ----------- burgermenu -------------- */
 .toggle-btn {
@@ -110,10 +111,19 @@ ul li:hover {
   display: none; /* Skjul knappen som standard */
 }
 .logo {
-  max-width: 10%;
+  height: 100px;
+  width: 100px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
 }
 
-/* newsletter styling */
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
+/* ----------- newsletter styling -------------- */
 .newsletter {
   display: grid;
   grid-template-columns: 1fr;
@@ -224,8 +234,8 @@ input[type="checkbox"] {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
     position: absolute;
-    right: 20px;
-    top: 25px;
+    right: 35px;
+    top: 35px;
   }
 
   .main-menu {
@@ -238,11 +248,15 @@ input[type="checkbox"] {
 
   .main-menu.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
-    gap: 5px;
+    gap: 10px;
     border-top: 2px solid var(--green-color);
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
+    padding: 15px;
+  }
+  .logo {
+  ???
   }
 }
