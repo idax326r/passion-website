@@ -45,77 +45,110 @@ h4, h5, p{
 
 /* --------------------------------------------- HEADER */
 
-/* header */
+ul li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+ul li:hover {
+  text-decoration: underline;
+}
+
+
 .banner {
-    /* display: flex; */
-    padding: 2rem;
-    /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: var(--primary-color);
-  }
-  .main-menu ul {
-    list-style: none;
-    padding: 0;
-    /* 2. Få elementerne til at stå ved siden af hinanden */
-    display: flex;
-    gap: 50px;
-    justify-content: end;
-  }
-  /* ----------- burgermenu -------------- */
-  .toggle-btn {
-    background: transparent;
-    border: none;
-    min-width: 44px;
-    min-height: 44px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: none; /* Skjul knappen som standard */
-  }
-  .logo {
-    max-width: 10%;
-  }
+  display: flex;
+  padding: 2rem;
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+  padding: 35px;
+}
 
-
-  ul li {
-    font-family: "Work Sans", sans-serif;
-    font-size: 1rem;
-  }
-  ul li:hover {
-    text-decoration: underline;
-  }
-
-
-header {
-     margin-bottom: 4rem; 
+hr {
+  border-bottom: 0.2px solid var(--primary-color);
+  width: 900px;
+  width: 100%;
 }
 
 
 
+/* ----------- burgermenu -------------- */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none; /* Skjul knappen som standard */
+}
+.logo {
+  height: 100px;
+  width: 100px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
 @media (max-width: 650px) {
-    .toggle-btn {
-      display: block; /* Vis knappen, når viewporten maksimalt er 600px */
-    }
-  
-    .main-menu {
-      display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
-    }
-  
-    .main-menu ul {
-      display: none; /* Fjern menu-listen som standard */
-    }
-  
-    .main-menu.shown ul {
-      /* Vis menu-listen, når klassen ".shown" er til stede */
-      gap: 5px;
-      border-top: 2px solid var(--green-color);
-      padding-top: 1rem;
-      display: flex;
-      flex: 1 1 100%;
-      flex-flow: column;
-    }
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    position: absolute;
+    right: 35px;
+    top: 35px;
   }
-  
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    gap: 10px;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    padding: 15px;
+  }
+  hr {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
