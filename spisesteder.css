@@ -1,5 +1,10 @@
 /* SPISESTEDER SIDE CSS */
 
+
+
+
+/* GENERELT */
+
 html {
     --primary-color: #d67b21;
     --background-color: #efeeea;
@@ -10,14 +15,14 @@ html {
 
 
 main {
-    margin-inline: 1.3rem;
+    margin-inline: 2.5rem;
 }  
 
-
 h1 {
-    font-size: 25px;
+    font-size: 50px;
     font-family: "Abril Fatface", cursive;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
   }
 
 h2{
@@ -34,85 +39,6 @@ h4, h5, p{
     font-family: "Work Sans", sans-serif;
     color: black;
 }
-
-.spisesteder_box {
-    border: solid black 1px;
-}
-
-
-.se_mere {
-    border: 2px;
-    padding: 8px 10px;
-    text-align: center;
-    padding: 3px 15px 3px 15px;
-    cursor: pointer;
-    border-style: solid;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-}
-
-
-.lokation_buttons {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 15px;
-}
-
-
-.sorter_container {
-    margin-bottom: 3rem;
-}
-
-.sorter_buttons button{
-    color: #d67b21;
-    border: 2px;
-    padding: 8px 10px;
-    text-align: center;
-    padding: 3px 15px 3px 15px;
-    cursor: pointer;
-    border-style: solid;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem; 
-}
-
-.sorter_buttons {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 5px;
-}
-
-
-.spisesteder_container {
-display: grid;
-grid-template-columns: 1fr;
-gap: 5px;
-}
-
-.spisesteder_box {
-    padding: 1.5rem;
-}
-
-.adresse_prisklasse {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 1.5rem;
-}
-
-.prisklasse_container, .adresse_container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.adresse_prisklasse img {
-    width: 1.3rem;
-}
-
-
-
-
-
 
 
 
@@ -158,6 +84,228 @@ gap: 1.5rem;
     max-width: 10%;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOKATION SEKTION */
+
+.lokation_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    height: 21rem;
+    }
+    
+
+.vesterbro {
+    background-image: url(svg/vesterbro.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.vesterbro:hover {
+    background-image: url(svg/vesterbro_hover.svg);
+  }
+
+
+.noerrebro {
+    background-image: url(svg/noerrebro.svg);
+    background-size: contain;
+    background-repeat: no-repeat;}
+.noerrebro:hover {
+    background-image: url(svg/noerrebro_hover.svg);
+  }
+
+
+.frederiksberg {
+    background-image: url(svg/frederiksberg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;}
+.frederiksberg:hover {
+    background-image: url(svg/frederiksberg_hover.svg);
+  }
+
+
+.koebenhavnk {
+    background-image: url(svg/koebenhavnk.svg);
+    background-size: contain;
+    background-repeat: no-repeat;}
+.koebenhavnk:hover {
+    background-image: url(svg/koebenhavnk_hover.svg);
+  }
+
+
+
+
+
+
+/* SORTER SEKTION */
+
+    .sorter_container {
+        margin-bottom: 3rem;
+    }
+    
+    .sorter_buttons button{
+        color: #d67b21;
+        border: 2px;
+        padding: 8px 10px;
+        text-align: center;
+        padding: 3px 15px 3px 15px;
+        cursor: pointer;
+        border-style: solid;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem; 
+    }
+    .sorter_buttons button:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+    
+    .sorter_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    }
+    
+
+
+
+/* SPISESTEDER SEKTION */
+.spisesteder_container {
+display: grid;
+grid-template-columns: 1fr;
+gap: 5px;
+}
+
+.spisesteder_box {
+    padding: 1.5rem;
+    background-color: white;
+
+}
+
+.adresse_prisklasse {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.5rem;
+}
+
+.prisklasse_container, .adresse_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adresse_prisklasse img {
+    width: 1.3rem;
+}
+
+
+
+/* SE MERE KNAP */
+
+.se_mere {
+    border: 2px;
+    padding: 8px 10px;
+    text-align: center;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+    border-style: solid;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.se_mere:hover {
+    background-color: black;
+    color: white;
+  }
+
+
+
+  .footer_line {
+    height: 3px;
+    background: var(--primary-color);
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .footer_flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer_left {
+    padding: 30px;
+    line-height: 25px;
+    /* place-self: start; */
+  }
+  
+  .footer_right {
+    padding: 30px;
+    line-height: 25px;
+    /* place-self: start end; */
+    color: var(--primary-color);
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-image: linear-gradient(#d67b21, #d67b21);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+  }
+  footer a:hover,
+  a:focus,
+  a:active {
+    background-size: 100% 0.1em;
+  }
+  
+  header a:hover,
+  a:focus,
+  a:active {
+    background-size: 100% 0.1em;
+  }
+  
+  .footer_rettigheder {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
