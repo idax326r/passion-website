@@ -131,10 +131,10 @@ hr {
   align-items: center;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
   column-gap: 30px;
   row-gap: 30px;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 /* ----------- burgermenu -------------- */
