@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="generel.css" />
     <link rel="stylesheet" href="omos.css" />
+    <link rel="icon" type="image/svg+xml" href="svg/logo.svg" />
+
     <title>Om os</title>
   </head>
   <body>
@@ -28,45 +30,46 @@
             <li class="valgt"><a href="omos.html">Om os</a></li>
           </ul>
         </nav>
+        <hr />
       </header>
       <section class="meet">
         <h1>Mød delight guide</h1>
         <p>Vores ambition er at dele vores københavnske madoplevelser med andre nysgerrige madentusiaster. Vi inviterer folk til at følge med i vores guide, som beskriver mad, stemning, stil og kvalitet ved de forskellige spisesteder i Københavnområdet.</p>
-        <button class="learn-button">Lær os at kende</button>
+        <a href="#news"><button class="learn-button">Lær os at kende</button></a>
       </section>
       <section class="white">
         <article class="omos">
-          <img class="item-left" src="omos.webp" alt="piger der spiser og er glade" />
+          <img src="omos.webp" alt="piger der spiser og er glade" />
           <div class="item-right">
             <h1>Om os</h1>
             <p>Vi startede The Delight Guide, fordi vi selv sætter enormt stor pris på gode madoplevelser, og deler en fælles passion for et univers hvor mad og stemning går hånd i hånd. Der er et hav af muligheder og når sulten melder sig, handler det om at finde noget der kan leve op til forventningerne, hvad end om det er fine dining med michelin mad, street food, take-away eller måske bare en cool bar med live musik, gode drinks og lækre appetizers til den lille sult. Vi mener at der er en restaurant efter enhver stemning - det gælder bare om at finde den rette. I Delight Guide giver vi vores bud på gode restauranter opdelt efter bydele inden for Københavnsområdet. Vores horisont bliver løbende udvidet og vi opdaterer selvfølgelig på bloggen undervejs.</p>
+            <button class="blog-button">Hvor skal du spise i dag?</button>
           </div>
         </article>
       </section>
-      <div class="newsletter">
-        <div>
-          <h1>Tilmeld dig vores nyhedsbrev her!</h1>
-          <hr />
-        </div>
-        <form>
-          <div class="wrap">
-            <input type="email" placeholder="Din e-mail" required />
-            <button type="submit">Tilmeld</button>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" id="conditions" />
-            <label for="conditions">Ja, jeg vil gerne modtage spændende nyheder fra the Delight Guide!</label>
-          </div>
-        </form>
-      </div>
       <div class="billedgalleri">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img src="billeder/lamar.jpeg" alt="" />
+        <img src="billeder/lamar.jpeg" alt="" />
       </div>
+      <div id="news">
+        <div class="newsletter">
+          <div>
+            <h1>Tilmeld dig vores nyhedsbrev her!</h1>
+            <hr />
+          </div>
+          <form>
+            <div class="wrap">
+              <input type="email" placeholder="Din e-mail" required />
+              <button type="submit">Tilmeld</button>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="conditions" />
+              <label for="conditions">Ja, jeg vil gerne modtage spændende nyheder fra the Delight Guide!</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <footer></footer>
       <script src="header.js"></script>
     </main>
