@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <title>blog</title>
 
     <style>
       body {
@@ -32,25 +32,55 @@
         z-index: -1;
       }
 
-      h2{
+      #tekst{
         background-color: white;
         margin-top: -90px;
         color:#d67b21;
+        margin-top: -30%;
+        margin-inline: 15px;
       }
+      h1{
+        text-align: center;
+        color:#d67b21;
+        font-size: 3rem;
+      }
+      h2{
+        text-align: center;
+        font-weight: 200;
+      }
+
+      h3{
+        padding-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      button{
+        border-radius: 8px;
+        background-color: white;
+        font-size: 0.5rem;
+      border: solid #d67b21 1px;
+        position: relative;
+        top:-8px;
+        left: 3px;        
+      }
+    
   
 
     </style>
 </head>
 <body>
-  <h1>Blog</h1>
+  <h1>BLOG</h1>
+  <h2>Vi holder dig opdateret om den københavnske madscene </h2>
 <main id="holder"></main>
 <template>
-
     <article>
         <img src="" alt="">
-        <h2 class="catchLine"></h2>
+          <div id="tekst">
+            <h3 class="catchLine"></h3>
+            <button>læs anmeldelse</button>
+          </div>
       </article>
-    </template>
+</template>
 
     <script>
         const endpoint="https://delight-6272.restdb.io/rest/restauranter";
@@ -74,7 +104,7 @@
                  
             console.log(person);
              const klon  =skabelon.cloneNode(true);
-             klon.querySelector("article").addEventListener("click",()=>visDetaljer(person));
+             klon.querySelector("button").addEventListener("click",()=>visDetaljer(person));
              klon.querySelector(".catchLine").textContent=person.overskrift;
              klon.querySelector("img").src = "billeder/" + person.billednavn;
              holder.appendChild(klon);
