@@ -117,7 +117,7 @@ ul li:hover {
 .newsletter {
   display: grid;
   grid-template-columns: 1fr;
-  background: #ebe7d8;
+  /* background: #ebe7d8; */
   margin: 0 auto;
   text-align: center;
   max-width: 450px;
@@ -192,7 +192,6 @@ input[type="checkbox"] {
   .newsletter {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    background: #ebe7d8;
     margin: 0 auto;
     text-align: center;
     max-width: 800px;
@@ -220,9 +219,13 @@ input[type="checkbox"] {
   }
 }
 
+/* ---------- burgermenu vis ---------- */
 @media (max-width: 650px) {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    position: absolute;
+    right: 20px;
+    top: 25px;
   }
 
   .main-menu {

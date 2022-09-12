@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-    
 
     <style>
-        #holder{
-            display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
-            gap: 40px;
-
-        }
-        article{
-            border:  solid black 5px;
-            padding-inline: 60px;
-            margin: 40px;
-        }
-img{
-    max-width: 100%;
-}
+      #holder {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        gap: 40px;
+      }
+      article {
+        border: solid black 5px;
+        padding-inline: 60px;
+        margin: 40px;
+      }
+      img {
+        max-width: 100%;
+      }
     </style>
 </head>
 <body>
@@ -32,10 +29,8 @@ img{
     <article>
         <img src="" alt="">
         <h2 class="catchLine"></h2>
-
-    </article>
-</template>
-
+      </article>
+    </template>
 
     <script>
         const endpoint="https://delight-6272.restdb.io/media";
@@ -66,7 +61,7 @@ img{
             });
         }
 
-        function visDetaljer (person){
+      function visDetaljer(person) {
         console.log(person);
         location.href=`blogindlæg.html?id=${person._id}`;
         }
@@ -74,5 +69,5 @@ img{
         hentData();
 
     </script>
-</body>
+  </body>
 </html>

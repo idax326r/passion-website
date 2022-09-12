@@ -23,6 +23,9 @@ body {
 img {
   max-width: 100%;
 }
+.valgt {
+  text-decoration: underline;
+}
 
 h1 {
   color: var(--primary-color);
