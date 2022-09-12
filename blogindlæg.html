@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogindlæg</title>
+
+    <style>
+        img{
+            max-width: 100%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+        <article class = singleArticle>
+            <h2></h2>
+            <p></p>
+            <img src="https://delight-6272.restdb.io/media/631de67970a5204f00023f4e" alt="">
+        </article>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get("id");
+            const myHeaders ={
+                "x-apikey": "631b0361fdc15b0265f17265"
+            }
+            console.log({id});
+            let personer;
+
+            const url=`https://delight-6272.restdb.io/rest/restauranter/${id}`;
+            const key = "631b0361fdc15b0265f17265";
+
+            async function hentData(){
+            const respons =await fetch(url,{
+                headers:myHeaders
+            });
+
+        personer =await respons.json();
+        console.log({personer});
+        visPersoner();
+            }
+            hentData();
+
+            function visPersoner(){
+            //document.querySelector("h2").textContent=personer.navn + " " +personer.efternavn;
+            document.querySelector("h2").textContent=personer.navn;
+            document.querySelector("p").textContent=personer.mad;
+            document.querySelector("img").src = "https://rdb-simpledb.restdb.io/media/imagefile.jpg";
+            }
+
+            hentData();
+        </script>
+
+
+</body>
+<html
