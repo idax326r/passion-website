@@ -23,15 +23,20 @@ body {
 img {
   max-width: 100%;
 }
+.valgt {
+  text-decoration: underline;
+}
 
 h1 {
   color: var(--primary-color);
+  font-family: "Abril Fatface", cursive;
 }
 h2 {
 }
 h3 {
 }
 p {
+  font-family: "Work Sans", sans-serif;
 }
 header {
 }
