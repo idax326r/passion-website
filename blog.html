@@ -21,50 +21,53 @@
         max-width: 100%;
       }
     </style>
-  </head>
-  <body>
-    <main id="holder"></main>
-    <template>
-      <article>
-        <img src="" alt="" />
+</head>
+<body>
+
+<main id="holder"></main>
+<template>
+    <article>
+        <img src="" alt="">
         <h2 class="catchLine"></h2>
       </article>
     </template>
 
     <script>
-      const endpoint = "https://delight-6272.restdb.io/media";
-      const mereinfo = {
-        headers: {
-          "x-apikey": "631b0361fdc15b0265f17265",
-        },
-      };
+        const endpoint="https://delight-6272.restdb.io/media";
+        const mereinfo={
+            headers:{
+                "x-apikey": "631b0361fdc15b0265f17265"
+            }
+        };
 
-      async function hentData() {
-        const response = await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
-        const json = await response.json();
-        vis(json);
-      }
+        async function hentData(){
+        
+        const response=await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
+        const json=await response.json();
+        vis(json);}
 
-      function vis(json) {
-        const holder = document.querySelector("#holder");
-        const skabelon = document.querySelector("template").content;
+        function vis(json){
+            const holder =document.querySelector("#holder");
+            const skabelon = document.querySelector("template").content;
 
-        json.forEach((person) => {
-          console.log(person);
-          const klon = skabelon.cloneNode(true);
-          klon.querySelector("article").addEventListener("click", () => visDetaljer(person));
-          klon.querySelector(".catchLine").textContent = person.overskrift;
-          klon.querySelector("img").src = "billeder/" + person.billednavn;
-          holder.appendChild(klon);
-        });
-      }
+            json.forEach(person => {
+                 
+            console.log(person);
+             const klon  =skabelon.cloneNode(true);
+             klon.querySelector("article").addEventListener("click",()=>visDetaljer(person));
+             klon.querySelector(".catchLine").textContent=person.overskrift;
+             klon.querySelector("img").src = "billeder/" + person.billednavn;
+             holder.appendChild(klon);
+            });
+        }
 
       function visDetaljer(person) {
         console.log(person);
-        location.href = `blogindlæg.html?id=${person._id}`;
-      }
+        location.href=`blogindlæg.html?id=${person._id}`;
+        }
+            
+        hentData();
 
-      hentData();
     </script>
   </body>
 </html>

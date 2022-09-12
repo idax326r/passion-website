@@ -16,10 +16,13 @@
     </style>
 </head>
 <body>
+
+
         <article class = singleArticle>
-            <h2></h2>
+        <h2></h2>
             <p></p>
-            <img src="https://delight-6272.restdb.io/media/631de67970a5204f00023f4e" alt="">
+            <img class = "img1" src="" alt="">
+            <img class="billede1" src="" alt="">
         </article>
 
         <script>
@@ -49,7 +52,8 @@
             //document.querySelector("h2").textContent=personer.navn + " " +personer.efternavn;
             document.querySelector("h2").textContent=personer.navn;
             document.querySelector("p").textContent=personer.mad;
-            document.querySelector("img").src = "https://rdb-simpledb.restdb.io/media/imagefile.jpg";
+            document.querySelector("img").src = "billeder/" + personer.billednavn;
+          
             }
 
             hentData();
@@ -57,4 +61,4 @@
 
 
 </body>
-<html
+</html>
