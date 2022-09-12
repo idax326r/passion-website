@@ -21,14 +21,14 @@ ul li {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
 }
+ul li:hover {
+  text-decoration: underline;
+}
 .meet {
   display: grid;
   place-items: center center;
   margin: 30px;
   padding: 30px;
-}
-.meet p {
-  /* font-size: 1rem; */
 }
 
 .learn-button {
@@ -53,6 +53,22 @@ ul li {
   display: grid;
   grid-template-columns: 1fr;
   margin: 50px;
+}
+.white {
+  background-color: white;
+  padding: 20px;
+}
+@media screen and (min-width: 730px) {
+  .omos {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 100px;
+    gap: 50px;
+  }
+
+  .meet {
+    padding: 50px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .omos {
@@ -169,7 +185,7 @@ input[type="checkbox"] {
   text-align: start;
   display: flex;
   gap: 0.7rem;
-  width: 400px;
+  /* width: 400px; */
   font-family: "Work Sans", sans-serif;
 }
 @media (min-width: 800px) {
