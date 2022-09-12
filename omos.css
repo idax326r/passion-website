@@ -49,10 +49,29 @@ ul li:hover {
   color: white;
 }
 
+.blog-button {
+  border: 1.5px var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 10px;
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px 35px 15px 35px;
+  cursor: pointer;
+  border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.blog-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 .omos {
   display: grid;
   grid-template-columns: 1fr;
   margin: 50px;
+  gap: 20px;
 }
 .white {
   background-color: white;
@@ -63,7 +82,7 @@ ul li:hover {
     display: grid;
     grid-template-columns: 1fr;
     margin: 100px;
-    gap: 50px;
+    gap: 20px;
   }
 
   .meet {
@@ -75,7 +94,7 @@ ul li:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 100px;
-    gap: 50px;
+    gap: 40px;
   }
   .meet {
     padding: 50px;
@@ -106,6 +125,18 @@ hr {
   width: 900px;
   width: 100%;
 }
+
+.billedgalleri {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+  column-gap: 30px;
+  row-gap: 30px;
+  padding: 50px;
+}
+
 /* ----------- burgermenu -------------- */
 .toggle-btn {
   background: transparent;
