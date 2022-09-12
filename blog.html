@@ -4,28 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Blog</title>
 
     <style>
+      body {
+  background-color: #efeeea;
+      }
+      main {
+        width: 1000px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
       #holder {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        margin-top: 50px;
       }
+
       article {
-        border: solid black 5px;
-        padding-inline: 60px;
-        margin: 40px;
+        margin: 20px;
       }
+
       img {
+        border-radius: 8px;
+        position: relative;
         max-width: 100%;
+        z-index: -1;
       }
+
+      h2{
+        background-color: white;
+        margin-top: -90px;
+        color:#d67b21;
+      }
+  
+
     </style>
 </head>
 <body>
-
+  <h1>Blog</h1>
 <main id="holder"></main>
 <template>
+
     <article>
         <img src="" alt="">
         <h2 class="catchLine"></h2>
@@ -33,7 +53,7 @@
     </template>
 
     <script>
-        const endpoint="https://delight-6272.restdb.io/media";
+        const endpoint="https://delight-6272.restdb.io/rest/restauranter";
         const mereinfo={
             headers:{
                 "x-apikey": "631b0361fdc15b0265f17265"
