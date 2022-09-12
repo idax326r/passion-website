@@ -75,10 +75,12 @@
                 <img src="svg/prisklasse.svg" alt="">
                 <h5 class="prisklasse">*prisklasse</h5>     
                 </div>
-     
             </div>
-            <p class="kortbeskrivelse">*kortbeskrivelse</p>    
-            <button class="se_mere">SE MERE</button>
+
+            <p class="kortbeskrivelse">*kortbeskrivelse</p> 
+            <div class="se_mere_container">
+              <button class="se_mere">SE MERE</button>
+            </div>   
         </div>
 
 
@@ -164,5 +166,60 @@
       </footer>
 
     <script src="header.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+      //------------- Lytter efter om DOM er loadet og går til start funktion
+      document.addEventListener("DOMContentLoaded", start);
+      
+      let spisesteder;
+      let sorter = "alle";
+      
+      
+      //------------- Start funktion
+      function start (){
+      
+      //------------- Find dataerne og load dem
+      
+      const url = "https://delight-6272.restdb.io/media";
+      const options = {
+          headers:{
+              'x-apikey': "631b0361fdc15b0265f17265"
+          }
+      };
+      
+      async function hentData(){
+          const respons = await fetch (url, options);
+          spisesteder = await respons.json();
+          vis();
+      }
+      
+      
+      function vis() {
+          console.log("vis funktion virker!");
+      
+      }
+      
+      
+      hentData(); 
+      
+      }
+      </script>
+      
+
+
+
   </body>
 </html>

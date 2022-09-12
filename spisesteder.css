@@ -1,48 +1,6 @@
 /* SPISESTEDER SIDE CSS */
 
 
-
-
-/* ---------------------------------------------GENERELT */
-
-html {
-    --primary-color: #d67b21;
-    --background-color: #efeeea;
-    --green-color: #9cc298;
-    --hover-color: ;
-  }
-
-
-
-main {
-    margin-inline: 2.5rem;
-}  
-
-h1 {
-    font-size: 50px;
-    font-family: "Abril Fatface", cursive;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-h2{
-    font-family: "Work Sans", sans-serif;
-    color: #d67b21;
-    font-size: 200%;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-}
-
-h4, h5, p{
-    font-family: "Work Sans", sans-serif;
-    color: black;
-}
-
-
-
-
 /* --------------------------------------------- HEADER */
 
 ul li {
@@ -57,7 +15,6 @@ ul li:hover {
 .banner {
   display: flex;
   padding: 2rem;
-  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   flex-wrap: wrap;
   justify-content: space-between;
   color: var(--primary-color);
@@ -66,22 +23,16 @@ ul li:hover {
 .main-menu ul {
   list-style: none;
   padding: 0;
-  /* 2. Få elementerne til at stå ved siden af hinanden */
   display: flex;
   gap: 50px;
   justify-content: end;
   padding: 35px;
 }
 
-hr {
-  border-bottom: 0.2px solid var(--primary-color);
-  width: 900px;
-  width: 100%;
-}
 
 
 
-/* ----------- burgermenu -------------- */
+/* ------------------------ BURGERMENU */
 .toggle-btn {
   background: transparent;
   border: none;
@@ -143,15 +94,46 @@ hr {
 
 
 
+/*------------------------------------------------------------------- MEDIA MAX WIDTH 650px */
+
+
+/* ---------------------------------------------GENERELT */
+
+html {
+  --primary-color: #d67b21;
+  --background-color: #efeeea;
+  --green-color: #9cc298;
+  --hover-color: ;
+}
 
 
 
+main {
+  margin-inline: 2.5rem;
+}  
 
+h1 {
+  font-size: 50px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
+h2{
+  font-family: "Work Sans", sans-serif;
+  color: #d67b21;
+  font-size: 200%;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
 
-
-
-
+h4, h5, p, img{
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  margin-bottom: 1rem;
+}
 
 
 
@@ -242,6 +224,7 @@ hr {
     .sorter_buttons button:hover {
         background-color: var(--primary-color);
         color: white;
+        border: none;
       }
     
     .sorter_buttons {
@@ -270,21 +253,50 @@ gap: 5px;
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 1.5rem;
+font-size: 70%;
+
 }
 
 .prisklasse_container, .adresse_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .adresse_prisklasse img {
     width: 1.3rem;
+    margin-right: 1rem;
 }
+
+.navn {
+  font-weight: 700;
+  letter-spacing: 4px;
+  }
+  
+  .adresse_prisklasse h5 {
+    font-style: italic;
+  
+  }
+  
+  .kortbeskrivelse {
+  font-weight: 300;
+  font-size: 67%;
+  }
+  
+  
+  
+
+
 
 
 
 
 /*--------------------------------------------- SE MERE KNAP */
+
+
+.se_mere_container {
+  display: flex;
+  justify-content: right;
+}
 
 .se_mere {
     border: 2px;
@@ -433,6 +445,7 @@ text-transform: uppercase;
   
 
 
+  /*------------------------------------------------------------------- MEDIA MIN WIDTH 650px */
 
 
 
@@ -482,6 +495,7 @@ h1 {
 
 
 
+/*------------------------------------------------------------------- MEDIA MIN WIDTH 900px */
 
   @media (min-width: 900px) {
 /*--------------------------------------------- GENERELT */
@@ -498,6 +512,11 @@ h2 {
   text-align: left;
 }
 
+
+
+
+/*--------------------------------------------- TOP 5 SEKTION */
+
 .top5_container h4 {
 font-size: 80%;
 }
@@ -511,6 +530,7 @@ font-size: 80%;
   margin-bottom: 3rem;
 }
 
+/*--------------------------------------------- SPISESTEDER SEKTION */
 
 .main_spisesteder {
   display: grid;
@@ -532,7 +552,9 @@ margin-top: 7rem;
   font-size: 51%;
 }
 
-
+  .sorter_buttons {
+      grid-template-columns: 1fr 1fr;
+      }
 
 /*--------------------------------------------- LOKATION SEKTION */
 
@@ -542,9 +564,7 @@ margin-top: 7rem;
 
 
 
-    .sorter_buttons {
-      grid-template-columns: 1fr 1fr;
-      }
+  
       
 }
 
@@ -555,6 +575,7 @@ margin-top: 7rem;
 
 
 
+/*------------------------------------------------------------------- MEDIA MIN WIDTH 1200px */
 
 
 @media (min-width: 1200px) { 
@@ -571,6 +592,16 @@ margin-top: 7rem;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 5px;
     }
+
+    .top5_container h4 {
+      font-size: 90%;
+      }
+      
+      .top5_container p {
+        font-size: 80%;
+      
+      }
+
 
 
 }
