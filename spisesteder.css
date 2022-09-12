@@ -3,7 +3,7 @@
 
 
 
-/* GENERELT */
+/* ---------------------------------------------GENERELT */
 
 html {
     --primary-color: #d67b21;
@@ -28,7 +28,7 @@ h1 {
 h2{
     font-family: "Work Sans", sans-serif;
     color: #d67b21;
-    font-size: 160%;
+    font-size: 200%;
     text-align: center;
     font-weight: 600;
     margin-top: 5rem;
@@ -43,47 +43,97 @@ h4, h5, p{
 
 
 
+/* --------------------------------------------- HEADER */
+
+ul li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+ul li:hover {
+  text-decoration: underline;
+}
 
 
-  /* header */
+.banner {
+  display: flex;
+  padding: 2rem;
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+  padding: 35px;
+}
 
-  ul li {
-    font-family: "Work Sans", sans-serif;
-    font-size: 1rem;
+hr {
+  border-bottom: 0.2px solid var(--primary-color);
+  width: 900px;
+  width: 100%;
+}
+
+
+
+/* ----------- burgermenu -------------- */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none; /* Skjul knappen som standard */
+}
+.logo {
+  height: 100px;
+  width: 100px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    position: absolute;
+    right: 35px;
+    top: 35px;
   }
 
-  .banner {
-    /* display: flex; */
-    padding: 2rem;
-    /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: var(--primary-color);
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
   }
 
   .main-menu ul {
-    list-style: none;
-    padding: 0;
-    /* 2. Få elementerne til at stå ved siden af hinanden */
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    gap: 10px;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 1rem;
     display: flex;
-    gap: 50px;
-    justify-content: end;
+    flex: 1 1 100%;
+    flex-flow: column;
+    padding: 15px;
   }
-
-  /* ----------- burgermenu -------------- */
-  .toggle-btn {
-    background: transparent;
-    border: none;
-    min-width: 44px;
-    min-height: 44px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: none; /* Skjul knappen som standard */
+  hr {
+    display: none;
   }
-  .logo {
-    max-width: 10%;
-  }
-  
+}
 
 
 
@@ -97,7 +147,23 @@ h4, h5, p{
 
 
 
-/* LOKATION SEKTION */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------- LOKATION SEKTION */
 
 .lokation_buttons {
     display: grid;
@@ -111,6 +177,7 @@ h4, h5, p{
     background-image: url(svg/vesterbro.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: right;
 }
 .vesterbro:hover {
     background-image: url(svg/vesterbro_hover.svg);
@@ -120,7 +187,9 @@ h4, h5, p{
 .noerrebro {
     background-image: url(svg/noerrebro.svg);
     background-size: contain;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    background-position: left;
+}
 .noerrebro:hover {
     background-image: url(svg/noerrebro_hover.svg);
   }
@@ -129,7 +198,9 @@ h4, h5, p{
 .frederiksberg {
     background-image: url(svg/frederiksberg.svg);
     background-size: contain;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    background-position: left;
+}
 .frederiksberg:hover {
     background-image: url(svg/frederiksberg_hover.svg);
   }
@@ -138,7 +209,9 @@ h4, h5, p{
 .koebenhavnk {
     background-image: url(svg/koebenhavnk.svg);
     background-size: contain;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    background-position: right;
+}
 .koebenhavnk:hover {
     background-image: url(svg/koebenhavnk_hover.svg);
   }
@@ -148,7 +221,7 @@ h4, h5, p{
 
 
 
-/* SORTER SEKTION */
+/*--------------------------------------------- SORTER SEKTION */
 
     .sorter_container {
         margin-bottom: 3rem;
@@ -210,7 +283,8 @@ gap: 1.5rem;
 
 
 
-/* SE MERE KNAP */
+
+/*--------------------------------------------- SE MERE KNAP */
 
 .se_mere {
     border: 2px;
@@ -230,6 +304,49 @@ gap: 1.5rem;
   }
 
 
+
+
+
+
+  /*--------------------------------------------- TOP 5 */
+
+  .top5_container p {
+    font-weight: lighter;
+    color: #d67b21;
+
+  }
+
+  .top5_container h4 {
+color: #d67b21;
+font-weight: 600;
+font-size: 120%;
+text-transform: uppercase;
+
+  }
+
+
+
+
+/*--------------------------------------------- INSTAGRAM */
+
+  .instagram_galleri{
+    display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 1rem;
+ margin-bottom: 5rem; 
+ }
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------- FOOTER */
 
   .footer_line {
     height: 3px;
@@ -308,28 +425,161 @@ gap: 1.5rem;
 
 
 
+
+
+
+
+
   
-  @media (max-width: 650px) {
-    .toggle-btn {
-      display: block; /* Vis knappen, når viewporten maksimalt er 600px */
-    }
-  
-    .main-menu {
-      display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
-    }
-  
-    .main-menu ul {
-      display: none; /* Fjern menu-listen som standard */
-    }
-  
-    .main-menu.shown ul {
-      /* Vis menu-listen, når klassen ".shown" er til stede */
-      gap: 5px;
-      border-top: 2px solid var(--green-color);
-      padding-top: 1rem;
-      display: flex;
-      flex: 1 1 100%;
-      flex-flow: column;
-    }
+
+
+
+
+
+  @media (min-width: 650px) {
+/*--------------------------------------------- GENERELT */
+main {
+  margin-inline: 5rem;
+}  
+
+h1 {
+  font-size: 60px;
+
+}
+
+
+
+
+/*--------------------------------------------- LOKATION SEKTION */
+
+
+.lokation_buttons {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 15px;
+        height: 9rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-inline: 3rem;
+        }
+
+
+.vesterbro {
+    background-position: center;
+}
+
+.noerrebro {
+    background-position: center;
+}
+.frederiksberg {
+    background-position: center;
+}
+.koebenhavnk {
+    background-position: center;
+}
+
   }
+
+
+
+
+
+  @media (min-width: 900px) {
+/*--------------------------------------------- GENERELT */
+main {
+  margin-inline: 10rem;
+}  
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: left;
+}
+
+.top5_container h4 {
+font-size: 80%;
+}
+
+.top5_container p {
+  font-size: 57%;
+
+}
+
+.top5_container {
+  margin-bottom: 3rem;
+}
+
+
+.main_spisesteder {
+  display: grid;
+grid-template-columns: 1fr 3fr;
+gap: 1rem;
+margin-top: 7rem;
+}
+
+.spisesteder_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+
+/*--------------------------------------------- SORTER SEKTION */
+
+.sorter_buttons button {
+  font-size: 51%;
+}
+
+
+
+/*--------------------------------------------- LOKATION SEKTION */
+
+.lokation_buttons {
+    margin-inline: 3rem;
+    } 
+
+
+
+    .sorter_buttons {
+      grid-template-columns: 1fr 1fr;
+      }
+      
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) { 
+  .lokation_buttons {
+    margin-inline: 10rem;
+    } 
+    h1 {
+      letter-spacing: 10px;    
+    }
+
+
+    .spisesteder_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
   

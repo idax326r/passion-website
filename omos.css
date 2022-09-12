@@ -8,7 +8,7 @@ html {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-family: "Abril Fatface", cursive;
   margin-bottom: 20px;
 }
@@ -49,10 +49,29 @@ ul li:hover {
   color: white;
 }
 
+.blog-button {
+  border: 1.5px var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 10px;
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px 35px 15px 35px;
+  cursor: pointer;
+  border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.blog-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 .omos {
   display: grid;
   grid-template-columns: 1fr;
   margin: 50px;
+  gap: 20px;
 }
 .white {
   background-color: white;
@@ -63,7 +82,7 @@ ul li:hover {
     display: grid;
     grid-template-columns: 1fr;
     margin: 100px;
-    gap: 50px;
+    gap: 20px;
   }
 
   .meet {
@@ -75,7 +94,7 @@ ul li:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 100px;
-    gap: 50px;
+    gap: 40px;
   }
   .meet {
     padding: 50px;
@@ -84,7 +103,7 @@ ul li:hover {
 
 /* header */
 .banner {
-  /* display: flex; */
+  display: flex;
   padding: 2rem;
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   flex-wrap: wrap;
@@ -98,7 +117,26 @@ ul li:hover {
   display: flex;
   gap: 50px;
   justify-content: end;
+  padding: 35px;
 }
+
+hr {
+  border-bottom: 0.2px solid var(--primary-color);
+  width: 900px;
+  width: 100%;
+}
+
+.billedgalleri {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
+  column-gap: 30px;
+  row-gap: 30px;
+  /* padding: 50px; */
+}
+
 /* ----------- burgermenu -------------- */
 .toggle-btn {
   background: transparent;
@@ -110,10 +148,19 @@ ul li:hover {
   display: none; /* Skjul knappen som standard */
 }
 .logo {
-  max-width: 10%;
+  height: 100px;
+  width: 100px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
 }
 
-/* newsletter styling */
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
+/* ----------- newsletter styling -------------- */
 .newsletter {
   display: grid;
   grid-template-columns: 1fr;
@@ -123,16 +170,17 @@ ul li:hover {
   max-width: 450px;
   padding: 30px 30px;
   color: rgb(124, 124, 124);
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border: 2px solid green;
 }
 .newsletter h1 {
   font-size: 1.4rem;
   font-style: italic;
 }
 .newsletter hr {
-  width: 100px;
-  height: 3px;
+  width: 150px;
+  height: 2px;
   margin: 15px auto;
   border: 0;
   background: var(--primary-color);
@@ -197,8 +245,8 @@ input[type="checkbox"] {
     max-width: 800px;
     padding: 50px 30px;
     color: rgb(124, 124, 124);
-    margin-bottom: 200px;
-    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-top: 100px;
     display: block;
   }
   .newsletter hr {
@@ -224,8 +272,8 @@ input[type="checkbox"] {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
     position: absolute;
-    right: 20px;
-    top: 25px;
+    right: 35px;
+    top: 35px;
   }
 
   .main-menu {
@@ -238,11 +286,15 @@ input[type="checkbox"] {
 
   .main-menu.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
-    gap: 5px;
-    border-top: 2px solid var(--green-color);
+    gap: 10px;
+    border-top: 1px solid var(--primary-color);
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
+    padding: 15px;
+  }
+  .banner hr {
+    display: none;
   }
 }
