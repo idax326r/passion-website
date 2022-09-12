@@ -27,6 +27,7 @@ img{
 </head>
 <body>
 
+
 <main id="holder"></main>
 <template>
     <article>
@@ -38,7 +39,7 @@ img{
 
 
     <script>
-        const endpoint="https://delight-6272.restdb.io/media";
+        const endpoint="https://delight-6272.restdb.io/rest/restauranter";
         const mereinfo={
             headers:{
                 "x-apikey": "631b0361fdc15b0265f17265"
@@ -59,20 +60,20 @@ img{
                  
             console.log(person);
              const klon  =skabelon.cloneNode(true);
+             klon.querySelector("img").src = "billeder/" + person.billednavn;
              klon.querySelector("article").addEventListener("click",()=>visDetaljer(person));
              klon.querySelector(".catchLine").textContent=person.overskrift;
-             klon.querySelector("img").src = "billeder/" + person.billednavn;
              holder.appendChild(klon);
             });
         }
+        hentData();
 
         function visDetaljer (person){
         console.log(person);
         location.href=`blogindlæg.html?id=${person._id}`;
         }
             
-        hentData();
-
+       
     </script>
 </body>
 </html>
