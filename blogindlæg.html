@@ -4,68 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="generel.css" />
+    <link rel="stylesheet" href="omos.css" />
+    <link rel="icon" type="image/svg+xml" href="svg/logo.svg" />
     <title>blogindlæg</title>
 
 <style>
-     
 
-
- h1{
-    text-align: center;
-    margin-block: 5%;
-    font-size: 3rem;
- }  
-
-.tekst{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
-    gap: 2%;
-    background-color:  #efeeea;
-    padding-inline: 10%;
-    margin-bottom: 5%;
-}
-
-.mad{
-    text-align: center;
-}
-.sted{
-text-align: center;
-}
-  
-      .billeder {
-            display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
-            gap: 20px;
-            cursor: pointer;
-            padding-inline: 10%;
-      }
-        
-    img{
-        max-width: 100%;  
-        border-radius: 8px;    
+    /* HEADER STYLE*/
+    ul li {
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+    }
+    ul li:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 650px) {
+        .toggle-btn {
+            display: block; 
+            position: absolute;
+            right: 35px;
+            top: 35px;
+        }
+        .main-menu {
+            display: contents; 
+            display: none; 
+        }
+        .main-menu.shown ul {
+            gap: 10px;
+            border-top: 1px solid var(--primary-color);
+            padding-top: 1rem;
+            display: flex;
+            flex: 1 1 100%;
+            flex-flow: column;
+            padding: 15px;
+        }
+        .banner hr {
+            display: none;
+        }
     }
 
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        margin-top: -10px;
+    } 
     
-.instagram_placering{
-    background-color:  #efeeea;
-}
+    h2{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        margin-left: 40%;
+        font-family: "Work Sans", sans-serif;
 
-button{
-        border-radius: 8px;
+    } 
+    .tekst{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
+        gap: 2%;
+        background-color:  #efeeea;
+        padding-inline: 10%;
+        margin-bottom: 30px;
+    }
+    .sted h3{
+        font-weight: 500;
+        font-family: "Work Sans", sans-serif;
+    }
+
+  
+    .billeder {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+        gap: 20px;
+        cursor: pointer;
+        padding-inline: 10%;
+        padding-block: 5%;
+        margin-block: 10px;
         background-color: white;
+    }
+        
+    img{
+        max-width: 100%;   
+    }
+    
+    .instagram_placering{
+        background-color:  #efeeea;
+    }
+
+    button{
         font-size: 1rem;
         text-decoration: underline;
         color: #d67b21;
         border:none;
-        margin-top: 20px;
-        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 20px;
     }
+
+.instagram_placering h3{
+    margin-bottom: -5px;
+    margin-inline: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+}
+.instagram_placering p{
+    margin-inline: 20px;
+}
 
 </style>
 
 
 </head>
 <body>
+    <header class="banner">
+        <div class="logo">
+          <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
+        </div>
+        <nav class="main-menu">
+          <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
+          <ul>
+            <li><a href="spisesteder.html">Spisesteder</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="valgt"><a href="omos.html">Om os</a></li>
+          </ul>
+        </nav>
+        <hr />
+      </header>
+
     <a href=blog.html>
         <button>Tilbage</button>
     </a>
@@ -78,8 +149,8 @@ button{
         </article>
         <article class="sted">
             <h2>Stedet</h2>
-            <h3></h3>
             <p></p>
+            <h3></h3>
         </article>
 
     </section>
@@ -93,6 +164,16 @@ button{
         <section class="instagram_placering">
             <h3></h3>
             <p></p>
+            <article id="instagram_galleri">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </article>
         </section>
 
 
@@ -131,10 +212,7 @@ button{
             document.querySelector(".article3").src = "billeder/" + personer.img2;
             document.querySelector(".instagram_placering p").textContent=personer.adresse;
             document.querySelector(".instagram_placering h3").textContent=personer.navn;
-            document.querySelector(".sted h3").textContent=personer.adresse;
-
-           
-            
+            document.querySelector(".sted h3").textContent=`Adresse: ${personer.adresse}`;
             }
 
             hentData();
