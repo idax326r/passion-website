@@ -126,8 +126,17 @@ h2{
   text-align: center;
   font-weight: 600;
   margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+h3{
+  font-family: "Work Sans", sans-serif;
+  color: #d67b21;
+  font-size: 100%;
+  font-weight: 600;
   margin-bottom: 2rem;
 }
+
 
 h4, h5, p, img{
   font-family: "Work Sans", sans-serif;
@@ -233,11 +242,17 @@ h4, h5, p, img{
     gap: 5px;
     }
     
+    .sortervalgt {
+      /* background-color: var(--primary-color); */
+      color: white;
+      border: none;  
+    }
+
 
 
 
 /* SPISESTEDER SEKTION */
-.spisesteder_container {
+#spisesteder_container {
 display: grid;
 grid-template-columns: 1fr;
 gap: 5px;
@@ -462,7 +477,6 @@ h1 {
 
 
 
-
 /*--------------------------------------------- LOKATION SEKTION */
 
 
@@ -539,7 +553,7 @@ gap: 1rem;
 margin-top: 7rem;
 }
 
-.spisesteder_container {
+#spisesteder_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
@@ -587,7 +601,7 @@ margin-top: 7rem;
     }
 
 
-    .spisesteder_container {
+    #spisesteder_container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 5px;
@@ -601,7 +615,7 @@ margin-top: 7rem;
         font-size: 80%;
       
       }
-
+    
 
 
 }

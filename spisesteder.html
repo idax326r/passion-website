@@ -44,8 +44,10 @@
 <div class="main_spisesteder">
   <div class="sorter_container">
     <h2 class="sorter_heading">SORTER</h2>
+    <h3 class="kategoriheading"></h3>
+
     <nav class="sorter_buttons">
-            <button data-retter= "alle" class="valgt">ALLE</button>
+            <button data-retter= "alle" class="sortervalgt">ALLE</button>
             <button data-retter= "">PRICEY</button>
             <button data-retter= "" >LOW-COST</button>
             <button data-retter= "">CASUAL VIBE</button>
@@ -60,11 +62,13 @@
 
     
 
-<div class="spisesteder_container">
+<section id="spisesteder_container"></section>
+<template>
 
-        <div class="spisesteder_box">
+        <article class="spisesteder_box">
             <img class="billede" src="" alt="">
             <h4 class="navn">*navn</h4>
+
             <div class="adresse_prisklasse">
                 <div class="adresse_container">
                 <img src="svg/adresse.svg" alt="">
@@ -81,10 +85,10 @@
             <div class="se_mere_container">
               <button class="se_mere">SE MERE</button>
             </div>   
-        </div>
+          </article>
 
 
-    </div>
+        </template>
 
 
 
@@ -170,43 +174,218 @@
 
 
 
-
-
-
-
-
-
-
-
-
     <script>
 
-const endpoint="https://delight-6272.restdb.io/rest/restauranter";
-        const mereinfo={
-            headers:{
-                "x-apikey": "631b0361fdc15b0265f17265"
-            }
-        };
-
-        async function hentData(){
-        
-        const response=await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
-        const json=await response.json();
-        vis(json);}
-
-        function vis(json){
-          console.log("vis funktion virker!");
+      //------------- Lytter efter om DOM er loadet og går til start funktion
+      document.addEventListener("DOMContentLoaded", start);
       
+      let retter;
+      let filter = "alle";
+      
+      
+      
+      
+      
+      //------------- Start funktion
+      function start (){
+      
+      //------------- Find dataerne og load dem
+      
+      const url = "https://delight-6272.restdb.io/rest/restauranter";
+      const options = {
+          headers:{
+              'x-apikey': "631b0361fdc15b0265f17265"
+          }
+      };
+      
+      async function hentData(){
+          const respons = await fetch (url, options);
+          retter = await respons.json();
+          console.log(retter);
+          vis();
       }
       
       
+      
+
+
+
+//------------- Tilføj eventlistener til lokation-knapper
+
+const lokationknapper = document.querySelectorAll (".lokation_buttons button");
+lokationknapper.forEach(knap => knap.addEventListener ("click", lokSorterSpisested));
+
+
+//------------- Funktion lokSorterSpisested (sker når man trykker på lokation-knapper)
+
+function lokSorterSpisested(){
+  console.log("lokSorterSpisested funktion virker!");
+
+}
+
+
+
+//------------- Tilføj eventlistener til sorter-knapper
+
+const sorterknapper = document.querySelectorAll (".sorter_buttons button");
+sorterknapper.forEach(knap => knap.addEventListener ("click", sorterSpisested));
+
+
+//------------- Funktion sorterSpisested (sker når man trykker på sorter-knapper)
+
+function sorterSpisested(){
+  console.log("sorterSpisested funktion virker!");
+
+  const heading = document.querySelector (".kategoriheading")
+    filter = this.dataset.retter
+    heading.textContent = this.textContent;
+
+  document.querySelector(".sortervalgt").classList.remove("sortervalgt");
+  this.classList.add("sortervalgt");
+    vis();
+
+}
+
+
+      
+
+      
+      
+      
+      
+      
+      
+      //------------- constanter laves til section og template
+      
+      const section = document.querySelector("section")
+      const template = document.querySelector("template").content;
+      
+      
+      // //------------- vis funktion 
+      
+       function vis() {
+        console.log("vis funktion virker!");
+
+      
+        section.textContent="";
+
+
+        retter.forEach((ret => {
+    
+    if(filter == ret.kategori || filter == "alle") {
+       const klon = template.cloneNode(true);
+    klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
+    klon.querySelector(".navn").textContent = ret.navn;
+    klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
+    klon.querySelector(".pris").textContent = ret.pris + ",-";
+    klon.querySelector(".detaljerknap").
+
+
+
+detaljerknap
+    section.appendChild(klon);
+    }
+
+}));
+
+
+
+      
+       }
+      
       hentData(); 
       
-      
+      }
       </script>
-      
+  
+
+
 
 
 
   </body>
 </html>
+
+
+
+<!-- 
+
+<script>
+  //------------- Lytter efter om DOM er loadet og går til start funktion
+
+document.addEventListener("DOMContentLoaded", start);
+
+
+function start (){
+
+
+//------------- Find dataerne og load dem
+
+    const endpoint="https://delight-6272.restdb.io/rest/restauranter";
+    const mereinfo={
+        headers:{
+            "x-apikey": "631b0361fdc15b0265f17265"
+        }
+    };
+
+    async function hentData(){
+    const response=await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
+    const json=await response.json();
+    vis(json);}
+
+
+
+
+
+
+
+//------------- Tilføj eventlistener til lokation-knapper
+
+const lokationknapper = document.querySelectorAll (".lokation_buttons button");
+lokationknapper.forEach(knap => knap.addEventListener ("click", lokSorterSpisested));
+
+
+//------------- Funktion lokSorterSpisested (sker når man trykker på lokation-knapper)
+
+function lokSorterSpisested(){
+  console.log("lokSorterSpisested funktion virker!");
+
+}
+
+
+
+
+
+
+
+//------------- Tilføj eventlistener til sorter-knapper
+
+const sorterknapper = document.querySelectorAll (".sorter_buttons button");
+sorterknapper.forEach(knap => knap.addEventListener ("click", sorterSpisested));
+
+
+//------------- Funktion sorterSpisested (sker når man trykker på sorter-knapper)
+
+function sorterSpisested(){
+  console.log("sorterSpisested funktion virker!");
+
+}
+
+
+
+
+
+
+//------------- Funktion vis(json) (sker når data er loadet (?))
+
+    function vis(json){
+      console.log("vis funktion virker!");
+  }
+  
+  
+  hentData(); 
+  
+}
+  </script>
+   -->
+
