@@ -43,3 +43,35 @@ header {
 
 footer {
 }
+
+/* FOOTER */
+.footer_line {
+  height: 1px;
+  background: var(--primary-color);
+  width: 85%;
+  margin: 0 auto;
+}
+
+.footer_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_left {
+  padding: 30px 10% 30px 10%;
+  line-height: 25px;
+  /* place-self: start; */
+}
+
+.footer_right {
+  padding: 30px 10% 30px 10%;
+  line-height: 25px;
+  /* place-self: start end; */
+  color: var(--primary-color);
+}
+
+footer a:hover,
+a:focus,
+a:active {
+  background-size: 100% 0.1em;
+}
