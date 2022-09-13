@@ -360,64 +360,67 @@ font-size: 70%;
 #popup article{
   position: fixed;
   background-color: #E3E1D8;
-  width: 20rem;
+  width: 18rem;
   padding: 4%;
-  height: 31rem;
-  top: 8%;
+  height: 38rem;
+  top: 3%;
 }
 
-#popup img{
-  max-width: 20rem;
+.billedurl{
+  max-width: 100%;
+  margin-bottom: 0;
 }
 
 
-
-.tilbageknap_billede {
-  display: grid;
-  align-items: end;
-  justify-items: start;
-}
-
-.detaljerinfo{
-  display: grid;
-  align-content: space-around;
-  justify-items: end;
-}
-
-.detaljerinfo h2 {
+.se_mere_info h2 {
+  color: black;
 font-size: 150%;
-font-weight: 900;
-text-align: right;
+font-weight: 800;
 margin-bottom: 0;
-margin-top: 5%;
+margin-top: 2%;
+text-align: left;
 
 }
-.detaljerinfo p {
-font-size: 65%;
-text-align: right;
+.se_mere_info p {
+font-size: 55%;
 margin-top: 5%;
-margin-left: 15%;
+/* margin-left: 15%; */
 }
 
-.detaljerinfo h4 {
-  font-size: 200%;
-  text-align: right;
+.se_mere_info h5 {
+  font-size: 80%;
   margin-top: 0%;
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-style: italic;
 }
 
 
-.detaljerknap_luk {
-  border: none;
-  border-radius: 1rem;
-  color: white;
-  background-color: #AA8913;
-  font-family: 'Work Sans', sans-serif;
-  text-transform: uppercase;
-  font-size: 70%;
-  padding-inline: 5%;
-  padding-block: 2%;
-  margin-top: 10%;
-  margin-bottom: 5%;
+.se_mere_luk {
+  border: 2px;
+  padding: 8px 10px;
+  text-align: center;
+  padding: 3px 15px 3px 15px;
+  cursor: pointer;
+  border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.adr_pris_vibe_serv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+
+  }
+
+.service_container_popup, .vibe_container_popup, .prisklasse_container_popup, .adresse_container_popup {
+  display: flex;
+  height: 2rem;
+  column-gap: 0.5rem;
+
 }
 
 
