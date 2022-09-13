@@ -610,7 +610,6 @@ margin-top: 7rem;
     #spisesteder_container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 5px;
     }
 
     .top5_container h4 {

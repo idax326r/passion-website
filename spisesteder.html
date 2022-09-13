@@ -46,16 +46,17 @@
     <h2 class="sorter_heading">SORTER</h2>
     <h3 class="kategoriheading"></h3>
 
+
     <nav class="sorter_buttons">
+          <!-- // der er noget i vejen med restdb og kategorierne herunder -->
             <button data-retter= "alle" class="sortervalgt">ALLE</button>
-            <button data-retter= "">PRICEY</button>
-            <button data-retter= "" >LOW-COST</button>
-            <button data-retter= "">CASUAL VIBE</button>
-            <button data-retter= "">FANCY VIBE</button>
-            <button data-retter= "">RESTAURANT</button>
-            <button data-retter= "">CAFE</button>
-            <button data-retter= "">BAR</button>
-            <button data-retter= "">STREET FOOD</button>
+            <button data-retter= "prisniveau">PRICEY</button>
+            <button data-retter= "prisniveau" >LOW-COST</button>
+            <button data-retter= "vibe">CASUAL VIBE</button>
+            <button data-retter= "vibe">FANCY VIBE</button>
+            <button data-retter= "typeSpisested">RESTAURANT</button>
+            <button data-retter= "typeSpisested">BAR</button>
+            <button data-retter= "typeSpisested">BAGERI</button>
     </nav>
 </div>
 
@@ -272,6 +273,7 @@ function sorterSpisested(){
 
         retter.forEach((ret => {
     
+          // der er noget i vejen med restdb og linjen herunder
     if(filter == ret.kategori || filter == "alle") {
        const klon = template.cloneNode(true);
     klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
@@ -308,86 +310,4 @@ function sorterSpisested(){
   </body>
 </html>
 
-
-
-<!-- 
-
-<script>
-  //------------- Lytter efter om DOM er loadet og går til start funktion
-
-document.addEventListener("DOMContentLoaded", start);
-
-
-function start (){
-
-
-//------------- Find dataerne og load dem
-
-    const endpoint="https://delight-6272.restdb.io/rest/restauranter";
-    const mereinfo={
-        headers:{
-            "x-apikey": "631b0361fdc15b0265f17265"
-        }
-    };
-
-    async function hentData(){
-    const response=await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
-    const json=await response.json();
-    vis(json);}
-
-
-
-
-
-
-
-//------------- Tilføj eventlistener til lokation-knapper
-
-const lokationknapper = document.querySelectorAll (".lokation_buttons button");
-lokationknapper.forEach(knap => knap.addEventListener ("click", lokSorterSpisested));
-
-
-//------------- Funktion lokSorterSpisested (sker når man trykker på lokation-knapper)
-
-function lokSorterSpisested(){
-  console.log("lokSorterSpisested funktion virker!");
-
-}
-
-
-
-
-
-
-
-//------------- Tilføj eventlistener til sorter-knapper
-
-const sorterknapper = document.querySelectorAll (".sorter_buttons button");
-sorterknapper.forEach(knap => knap.addEventListener ("click", sorterSpisested));
-
-
-//------------- Funktion sorterSpisested (sker når man trykker på sorter-knapper)
-
-function sorterSpisested(){
-  console.log("sorterSpisested funktion virker!");
-
-}
-
-
-
-
-
-
-//------------- Funktion vis(json) (sker når data er loadet (?))
-
-    function vis(json){
-      console.log("vis funktion virker!");
-  }
-  
-  
-  hentData(); 
-  
-}
-  </script>
-   -->
 
