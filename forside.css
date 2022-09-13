@@ -37,15 +37,27 @@ section {
   cursor: pointer;
   display: none; /* Skjul knappen som standard */
 }
-.logo img {
-  max-width: 10%;
-  background-size: cover;
+.logo_header {
+  height: 100px;
+  width: 100px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.logo_header img {
+  height: auto;
+  width: 100%;
 }
 
 /* INDHOLD PÅ SIDEN */
 .stort_logo {
-  max-width: 70%;
-  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 /* FOOTER */
@@ -62,13 +74,13 @@ section {
 }
 
 .footer_left {
-  padding: 30px;
+  padding: 30px 10% 30px 10%;
   line-height: 25px;
   /* place-self: start; */
 }
 
 .footer_right {
-  padding: 30px;
+  padding: 30px 10% 30px 10%;
   line-height: 25px;
   /* place-self: start end; */
   color: var(--primary-color);
@@ -90,10 +102,17 @@ a:active {
   background-size: 100% 0.1em;
 }
 
-header a:hover,
+header ul a:hover,
 a:focus,
 a:active {
   background-size: 100% 0.1em;
+}
+
+.logo_header:hover,
+a:focus,
+a:active {
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 .footer_rettigheder {
@@ -107,26 +126,55 @@ h1 {
   font-size: 35px;
   font-family: "Abril Fatface", cursive;
   margin-bottom: 20px;
-  margin-top: 100px;
+  margin-top: 200px;
   letter-spacing: 18px;
 }
 
-.pil {
-  border: solid #d67b21;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  position: absolute;
-  right: 50%;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+/* header */
+.banner {
+  display: flex;
+  padding: 2rem;
+  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  /* 2. Få elementerne til at stå ved siden af hinanden */
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+  padding: 35px;
 }
 
-.top_5 {
+hr {
+  border-bottom: 0.2px solid var(--primary-color);
+  width: 900px;
+  width: 100%;
+}
+
+.pil {
+  background-image: url(svg/pil_icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 50%;
+  margin-bottom: 100px;
+}
+.pil:hover {
+  background-image: url(svg/pil_icon9.svg);
+}
+
+/* .top_5 {
   background-color: white;
   border-radius: 20px;
   padding: 30px;
-}
+} */
 
 figcaption {
   background-color: white;
@@ -135,15 +183,31 @@ figcaption {
   transform: translateY(-15px);
 }
 
+#holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+
+article {
+  margin: 20px;
+}
+
 img {
   max-width: 100%;
+}
+
+ul li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
 }
 
 p {
   font-family: "Work Sans", sans-serif;
 }
 
-button {
+div button {
   border: 1.5px var(--primary-color);
   color: var(--primary-color);
   padding: 8px 10px;
@@ -156,13 +220,22 @@ button {
   font-weight: 500;
   font-size: 0.8rem;
 }
-button:hover {
+div button:hover {
   background-color: var(--primary-color);
   color: white;
 }
 
 h2 {
   font-size: 20px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 14px;
   font-family: "Abril Fatface", cursive;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -180,10 +253,10 @@ h4 {
 
 h5 {
   font-size: 10px;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Work Sans", sans-serif;
   margin-bottom: 10px;
   margin-top: 10px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .del_1 {
@@ -206,19 +279,12 @@ h5 {
   margin-top: 50px;
 }
 
-.del_3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 30px 200px 30px;
-  gap: 30px;
-}
-
 @media (min-width: 800px) {
   .del_1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 200px 30px 0 30px;
-    gap: 30px;
+    margin: 110px 30px 0 30px;
+    gap: 50px;
   }
 
   .del_2 {
@@ -226,15 +292,8 @@ h5 {
     justify-content: space-around;
     background-color: white;
     padding: 30px;
-    margin: 200px 0 200px 0;
+    margin: 110px 0 110px 0;
     text-align: center;
-  }
-
-  .del_3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 30px 200px 30px;
-    gap: 30px;
   }
 
   .folkene_bag {
