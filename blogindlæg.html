@@ -6,25 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blogindlæg</title>
 
-    <style>
-        img{
-            max-width: 100%;
-        }
+<style>
+     
 
 
+ h1{
+    text-align: center;
+    margin-block: 5%;
+    font-size: 3rem;
+ }  
 
-    </style>
+.tekst{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
+    gap: 2%;
+    background-color:  #efeeea;
+    padding-inline: 10%;
+    margin-bottom: 5%;
+}
+
+.mad{
+    text-align: center;
+}
+.sted{
+text-align: center;
+}
+  
+      .billeder {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+            gap: 20px;
+            cursor: pointer;
+            padding-inline: 10%;
+      }
+        
+    img{
+        max-width: 100%;  
+        border-radius: 8px;    
+    }
+
+    
+.instagram_placering{
+    background-color:  #efeeea;
+}
+
+button{
+        border-radius: 8px;
+        background-color: white;
+        font-size: 1rem;
+        text-decoration: underline;
+        color: #d67b21;
+        border:none;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+</style>
+
+
 </head>
 <body>
-
-
-        <article class = singleArticle>
-        <h2></h2>
+    <a href=blog.html>
+        <button>Tilbage</button>
+    </a>
+ 
+    <h1 id="overskrift"></h1>
+    <section class="tekst">
+       <article class="mad">
+            <h2>Maden</h2>
             <p></p>
-            <img class = "img1" src="" alt="">
-            <img class="billede1" src="" alt="">
+        </article>
+        <article class="sted">
+            <h2>Stedet</h2>
+            <h3></h3>
+            <p></p>
         </article>
 
+    </section>
+
+        <section class = "billeder">
+                <img class="article1" src="" alt="">
+                <img class="article2" src="" alt="">
+                <img class="article3" src="" alt="">
+        </section>
+
+        <section class="instagram_placering">
+            <h3></h3>
+            <p></p>
+        </section>
+
+
+  
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get("id");
@@ -50,10 +122,19 @@
 
             function visPersoner(){
             //document.querySelector("h2").textContent=personer.navn + " " +personer.efternavn;
-            document.querySelector("h2").textContent=personer.navn;
-            document.querySelector("p").textContent=personer.mad;
-            document.querySelector("img").src = "billeder/" + personer.billednavn;
-          
+
+            document.querySelector(".mad p").textContent=personer.mad;
+            document.querySelector(".sted p").textContent=personer.stedet;
+            document.querySelector("#overskrift").textContent=personer.navn;
+            document.querySelector(".article1").src = "billeder/" + personer.billednavn;
+            document.querySelector(".article2").src = "billeder/" + personer.img;
+            document.querySelector(".article3").src = "billeder/" + personer.img2;
+            document.querySelector(".instagram_placering p").textContent=personer.adresse;
+            document.querySelector(".instagram_placering h3").textContent=personer.navn;
+            document.querySelector(".sted h3").textContent=personer.adresse;
+
+           
+            
             }
 
             hentData();

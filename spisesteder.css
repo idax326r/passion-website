@@ -1,124 +1,139 @@
 /* SPISESTEDER SIDE CSS */
 
 
+/* --------------------------------------------- HEADER */
+
+ul li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+ul li:hover {
+  text-decoration: underline;
+}
+
+
+.banner {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+  justify-content: end;
+  padding: 35px;
+}
+
+
+
+
+/* ------------------------ BURGERMENU */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none; /* Skjul knappen som standard */
+}
+.logo {
+  height: 100px;
+  width: 100px;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    position: absolute;
+    right: 35px;
+    top: 35px;
+  }
+
+  .main-menu {
+    display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .main-menu ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .main-menu.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    gap: 10px;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    padding: 15px;
+  }
+  hr {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------- MEDIA MAX WIDTH 650px */
 
 
 /* ---------------------------------------------GENERELT */
 
 html {
-    --primary-color: #d67b21;
-    --background-color: #efeeea;
-    --green-color: #9cc298;
-    --hover-color: ;
-  }
+  --primary-color: #d67b21;
+  --background-color: #efeeea;
+  --green-color: #9cc298;
+  --hover-color: ;
+}
 
 
 
 main {
-    margin-inline: 2.5rem;
+  margin-inline: 2.5rem;
 }  
 
 h1 {
-    font-size: 50px;
-    font-family: "Abril Fatface", cursive;
-    margin-bottom: 40px;
-    text-align: center;
-  }
+  font-size: 50px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
 h2{
-    font-family: "Work Sans", sans-serif;
-    color: #d67b21;
-    font-size: 200%;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+  font-family: "Work Sans", sans-serif;
+  color: #d67b21;
+  font-size: 200%;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
-h4, h5, p{
-    font-family: "Work Sans", sans-serif;
-    color: black;
+h4, h5, p, img{
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  margin-bottom: 1rem;
 }
-
-
-
-
-/* --------------------------------------------- HEADER */
-
-/* header */
-.banner {
-    /* display: flex; */
-    padding: 2rem;
-    /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: var(--primary-color);
-  }
-  .main-menu ul {
-    list-style: none;
-    padding: 0;
-    /* 2. Få elementerne til at stå ved siden af hinanden */
-    display: flex;
-    gap: 50px;
-    justify-content: end;
-  }
-  /* ----------- burgermenu -------------- */
-  .toggle-btn {
-    background: transparent;
-    border: none;
-    min-width: 44px;
-    min-height: 44px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: none; /* Skjul knappen som standard */
-  }
-  .logo {
-    max-width: 10%;
-  }
-
-
-  ul li {
-    font-family: "Work Sans", sans-serif;
-    font-size: 1rem;
-  }
-  ul li:hover {
-    text-decoration: underline;
-  }
-
-
-header {
-     margin-bottom: 4rem; 
-}
-
-
-
-@media (max-width: 650px) {
-    .toggle-btn {
-      display: block; /* Vis knappen, når viewporten maksimalt er 600px */
-    }
-  
-    .main-menu {
-      display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
-    }
-  
-    .main-menu ul {
-      display: none; /* Fjern menu-listen som standard */
-    }
-  
-    .main-menu.shown ul {
-      /* Vis menu-listen, når klassen ".shown" er til stede */
-      gap: 5px;
-      border-top: 2px solid var(--green-color);
-      padding-top: 1rem;
-      display: flex;
-      flex: 1 1 100%;
-      flex-flow: column;
-    }
-  }
-  
-
-
-
 
 
 
@@ -209,6 +224,7 @@ header {
     .sorter_buttons button:hover {
         background-color: var(--primary-color);
         color: white;
+        border: none;
       }
     
     .sorter_buttons {
@@ -237,21 +253,50 @@ gap: 5px;
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 1.5rem;
+font-size: 70%;
+
 }
 
 .prisklasse_container, .adresse_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .adresse_prisklasse img {
     width: 1.3rem;
+    margin-right: 1rem;
 }
+
+.navn {
+  font-weight: 700;
+  letter-spacing: 4px;
+  }
+  
+  .adresse_prisklasse h5 {
+    font-style: italic;
+  
+  }
+  
+  .kortbeskrivelse {
+  font-weight: 300;
+  font-size: 67%;
+  }
+  
+  
+  
+
+
 
 
 
 
 /*--------------------------------------------- SE MERE KNAP */
+
+
+.se_mere_container {
+  display: flex;
+  justify-content: right;
+}
 
 .se_mere {
     border: 2px;
@@ -400,6 +445,7 @@ text-transform: uppercase;
   
 
 
+  /*------------------------------------------------------------------- MEDIA MIN WIDTH 650px */
 
 
 
@@ -449,6 +495,7 @@ h1 {
 
 
 
+/*------------------------------------------------------------------- MEDIA MIN WIDTH 900px */
 
   @media (min-width: 900px) {
 /*--------------------------------------------- GENERELT */
@@ -465,6 +512,11 @@ h2 {
   text-align: left;
 }
 
+
+
+
+/*--------------------------------------------- TOP 5 SEKTION */
+
 .top5_container h4 {
 font-size: 80%;
 }
@@ -478,6 +530,7 @@ font-size: 80%;
   margin-bottom: 3rem;
 }
 
+/*--------------------------------------------- SPISESTEDER SEKTION */
 
 .main_spisesteder {
   display: grid;
@@ -499,7 +552,9 @@ margin-top: 7rem;
   font-size: 51%;
 }
 
-
+  .sorter_buttons {
+      grid-template-columns: 1fr 1fr;
+      }
 
 /*--------------------------------------------- LOKATION SEKTION */
 
@@ -509,9 +564,7 @@ margin-top: 7rem;
 
 
 
-    .sorter_buttons {
-      grid-template-columns: 1fr 1fr;
-      }
+  
       
 }
 
@@ -522,6 +575,7 @@ margin-top: 7rem;
 
 
 
+/*------------------------------------------------------------------- MEDIA MIN WIDTH 1200px */
 
 
 @media (min-width: 1200px) { 
@@ -538,6 +592,16 @@ margin-top: 7rem;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 5px;
     }
+
+    .top5_container h4 {
+      font-size: 90%;
+      }
+      
+      .top5_container p {
+        font-size: 80%;
+      
+      }
+
 
 
 }
