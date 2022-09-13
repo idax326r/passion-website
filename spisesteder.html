@@ -95,6 +95,45 @@
 
 
 
+        <div id="popup">
+          <article class="articlepopup">
+              <img class="billedurl" src="" alt="">  
+           
+              <div class="se_mere_info">
+                  <h2 class="navn"></h2>
+                  <p class="mad_stedet"></p>    
+                   
+
+              <div class="adr_pris_vibe_serv">
+                    <div class="adresse_container_popup">
+                    <img src="svg/adresse.svg" alt="">
+                    <h5 class="adresse_popup"></h5>    
+                    </div>
+            
+                    <div class="prisklasse_container_popup">
+                    <img src="svg/prisklasse.svg" alt="">
+                    <h5 class="prisniveau_popup"></h5>     
+                    </div>
+
+                    <div class="vibe_container_popup">
+                      <img src="svg/vibe.svg" alt="">
+                      <h5 class="vibe_popup"></h5>    
+                      </div>
+              
+                      <div class="service_container_popup">
+                      <img src="svg/service.svg" alt="">
+                      <h5 class="service_popup"></h5>     
+                      </div>
+              </div>
+  
+              </div>
+              <button class="se_mere_luk">Tilbage</button>  
+
+          </article>
+      </div>
+
+
+
 
 <div class="top5_instagram_container">
     <div class="top5_container">
@@ -278,13 +317,14 @@ function sorterSpisested(){
           // ??????????? Der er noget i vejen med restdb og linjen herunder. Jeg har tydeligvis ikke forstået hvordan alt det med kategorier og fields osv fungerer.. 
     if(filter == ret.kategori || filter == "alle") {
        const klon = template.cloneNode(true);
+    klon.querySelector(".se_mere").addEventListener("click", ()=> visDetaljer(ret));
+
     klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
     klon.querySelector(".navn").textContent = ret.navn;
     klon.querySelector(".overskrift").textContent = ret.overskrift;
     klon.querySelector(".adresse").textContent = ret.gade;
 
     klon.querySelector(".prisniveau").textContent = ret.prisniveau;
-    // klon.querySelector(".detaljerknap").
 
 
 
@@ -294,6 +334,23 @@ function sorterSpisested(){
 
 }));
 
+document.querySelector(".se_mere_luk").addEventListener("click", () => (popup.style.display = "none"));
+
+
+function visDetaljer(rettensData){
+console.log("popup virker lidt");
+const popup =document.querySelector("#popup");
+popup.style.display="flex";
+popup.querySelector("h2").textContent = rettensData.navn;
+popup.querySelector("img").src = "billeder/" + rettensData.billednavn;
+popup.querySelector("p").textContent = rettensData.mad + rettensData.stedet;
+popup.querySelector(".prisniveau_popup").textContent = rettensData.prisniveau;
+popup.querySelector(".adresse_popup").textContent = rettensData.gade;
+popup.querySelector(".service_popup").textContent = rettensData.service;
+popup.querySelector(".vibe_popup").textContent = rettensData.vibe;
+
+
+}
 
 
       
