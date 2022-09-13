@@ -10,83 +10,86 @@
   </head>
   <body>
     <header class="banner">
-      <div class="logo">
-        <a href="forside.html"> <img src="svg/logo.svg" alt="logo" /></a>
+      <div class="logo_header">
+        <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
       </div>
       <nav class="main-menu">
         <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
         <ul>
           <li><a href="spisesteder.html">Spisesteder</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="omos.html">Om os</a></li>
+          <li class="valgt"><a href="omos.html">Om os</a></li>
         </ul>
       </nav>
+      <hr />
     </header>
-<section>
-    <div class="stort_logo">
-        <img src="svg/logo.svg" alt="logo" /></a>
-    </div>
+    <section>
+      <!-- <div class="stort_logo"> -->
+        <img class="stort_logo" src="svg/logo_u_tekst.svg" alt="logo" /></a>
+      <!-- </div> -->
 
-    <p class="pil"></p><br />
+      <button class="pil"></button>
 
-    <h1>VELKOMMEN</h1>
+      <h1>VELKOMMEN</h1>
 
-<div class="del_1">
-    <div class="top_5">
-        <h2>UGENS TOP 5</h2><br />
+      <div class="del_1">
+        <div class="top_5">
+          <h2>UGENS TOP 5</h2>
+          <br />
 
-        <h4>1. Babylon</h4>
-        <p>Ud til Søerne i København ligger en af byens mest ikoniske bygninger, Søpavillonen…</p><br />
-        
-        <h4>2. Cicchetti</h4>
-        <p>Den lille restaurant på Nørrebro er opkaldt efter det italienske ord for salte snacks og små, lækre retter…</p><br />
+          <h4>1. Babylon</h4>
+          <p>Ud til Søerne i København ligger en af byens mest ikoniske bygninger, Søpavillonen…</p>
+          <br />
 
-        <h4>3. Baka d’Busk</h4>
-        <p>Den vegetariske restaurant og bistro på Rantzausgade er hurtigt blevet en Nørrebro-favorit for…</p><br />
+          <h4>2. Cicchetti</h4>
+          <p>Den lille restaurant på Nørrebro er opkaldt efter det italienske ord for salte snacks og små, lækre retter…</p>
+          <br />
 
-        <h4>4. Propaganda</h4>
-        <p>Lige ved den ikoniske mælkebue ved Hovedbanegården ligger Propaganda, der åbnede…</p><br />
+          <h4>3. Baka d’Busk</h4>
+          <p>Den vegetariske restaurant og bistro på Rantzausgade er hurtigt blevet en Nørrebro-favorit for…</p>
+          <br />
 
-        <h4>5. ØsterGro</h4>
-        <p>Du skal vide, at det er der, ØsterGro, for du kan ikke se det fra gaden. ØsterGro er…</p><br />
-    </div>
+          <h4>4. Propaganda</h4>
+          <p>Lige ved den ikoniske mælkebue ved Hovedbanegården ligger Propaganda, der åbnede…</p>
+          <br />
 
-    <div class="img_del_1">
-          <img src="babylon_pizza.png" alt="Babylon pizza">
+          <h4>5. ØsterGro</h4>
+          <p>Du skal vide, at det er der, ØsterGro, for du kan ikke se det fra gaden. ØsterGro er…</p>
+          <br />
+        </div>
+
+        <div class="img_del_1">
+          <img src="billeder/otto1.webp" alt="Pizza" />
           <figcaption>
             <h5>OMKRING UGENS TOP VALG</h5>
             <h2>BABYLON</h2>
             <p>Ud til Søerne i København ligger en af byens mest ikoniske bygninger, Søpavillonen, som i denne uge er vores top-valg.</p>
-            <a href="XXX"><button>SE MERE PÅ BLOGGEN</button></a>
+            <a href="blog.html"><button>SE MERE PÅ BLOGGEN</button></a>
           </figcaption>
-    </div>
-</div>
-</section>
-<div class="del_2">
-    <div class="spisesteder_inspi">
-        <h2>FIND INSPIRATION TIL <br /> DIT NÆSTE MÅLTID HER!</h2>
-        <a href="XXX"><button>SE ALLE SPISESTEDER</button></a>
-    </div>
+        </div>
+      </div>
+    </section>
+    <div class="del_2">
+      <div class="spisesteder_inspi">
+        <h3>FIND INSPIRATION TIL</h3>
+        <h2>DIT NÆSTE MÅLTID HER!</h2>
+        <a href="spisesteder.html"><button>SE ALLE SPISESTEDER</button></a>
+      </div>
 
-    <div class="folkene_bag">
-        <h2>HVEM ER FOLKENE BAG <br /> THE DELIGHT GUIDE?</h2>
-        <a href="XXX"><button>LÆS MERE OM OS</button></a>
+      <div class="folkene_bag">
+        <h3>HVEM ER FOLKENE BAG</h3>
+        <h2>THE DELIGHT GUIDE?</h2>
+        <a href="omos.html"><button>LÆS MERE OM OS</button></a>
+      </div>
     </div>
-</div>
-<section>
-<div class="del_3">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-        <img src="babylon_pizza.png" alt="Babylon pizza">
-</div>
-
-</section>
+    <section>
+      <div id="holder"></div>
+      <template>
+        <article>
+          <img src="" alt="" />
+        </article>
+      </template>
+    </section>
     <footer>
       <div class="footer_line"></div>
       <div class="footer_flex">
@@ -99,8 +102,8 @@
         </p>
 
         <p class="footer_right">
-          Spisesteder <br />
-          Blog <br />
+          <a href="spisesteder.html">Spisesteder</a><br />
+          <a href="blog.html">Blog</a><br />
           <a href="omos.html">Om os</a>
         </p>
       </div>
@@ -109,5 +112,40 @@
         <p>© 2022 The Delight Guide. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+      const endpoint = "https://delight-6272.restdb.io/media";
+      const mereinfo = {
+        headers: {
+          "x-apikey": "631b0361fdc15b0265f17265",
+        },
+      };
+
+      async function hentData() {
+        const response = await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
+        const json = await response.json();
+        vis(json);
+      }
+
+      function vis(json) {
+        const holder = document.querySelector("#holder");
+        const skabelon = document.querySelector("template").content;
+
+        json.forEach((person) => {
+          console.log(person);
+          const klon = skabelon.cloneNode(true);
+          klon.querySelector("article").addEventListener("click", () => visDetaljer(person));
+          klon.querySelector("img").src = "billeder/" + person.billednavn;
+          holder.appendChild(klon);
+        });
+      }
+
+      function visDetaljer(person) {
+        console.log(person);
+        location.href = `blogindlæg.html?id=${person._id}`;
+      }
+
+      hentData();
+    </script>
   </body>
 </html>
