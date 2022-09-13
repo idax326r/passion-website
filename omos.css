@@ -131,7 +131,7 @@ hr {
   align-items: center;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
   column-gap: 30px;
   row-gap: 30px;
   /* padding: 50px; */
