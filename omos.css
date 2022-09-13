@@ -134,11 +134,11 @@ hr {
 .billedgalleri {
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-  column-gap: 30px;
-  row-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
+  column-gap: 20px;
+  row-gap: 20px;
   /* padding: 50px; */
 }
 
@@ -155,9 +155,6 @@ hr {
 .logo {
   height: 100px;
   width: 100px;
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: center;
 }
 
 .logo img {
@@ -249,8 +246,8 @@ input[type="checkbox"] {
     max-width: 800px;
     padding: 50px 30px;
     color: rgb(124, 124, 124);
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     display: block;
   }
   .newsletter hr {
