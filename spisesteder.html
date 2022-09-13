@@ -48,7 +48,7 @@
 
 
     <nav class="sorter_buttons">
-          <!-- // der er noget i vejen med restdb og kategorierne herunder -->
+          <!-- // ??????????? der er noget i vejen med restdb og kategorierne herunder. Det er formentlig helt hen i vejret, men jeg kan ikke gennemskue hvordan det skal løses.. -->
             <button data-retter= "alle" class="sortervalgt">ALLE</button>
             <button data-retter= "prisniveau">PRICEY</button>
             <button data-retter= "prisniveau" >LOW-COST</button>
@@ -222,6 +222,7 @@ lokationknapper.forEach(knap => knap.addEventListener ("click", lokSorterSpisest
 function lokSorterSpisested(){
   console.log("lokSorterSpisested funktion virker!");
 
+  vis();
 }
 
 
@@ -256,7 +257,7 @@ function sorterSpisested(){
       
       
       
-      //------------- constanter laves til section og template
+      //------------- Constanter laves til section og template
       
       const section = document.querySelector("section")
       const template = document.querySelector("template").content;
@@ -267,13 +268,14 @@ function sorterSpisested(){
        function vis() {
         console.log("vis funktion virker!");
 
-      
+      // //------------- Reset alt i section
+
         section.textContent="";
 
 
         retter.forEach((ret => {
     
-          // der er noget i vejen med restdb og linjen herunder
+          // ??????????? Der er noget i vejen med restdb og linjen herunder. Jeg har tydeligvis ikke forstået hvordan alt det med kategorier og fields osv fungerer.. 
     if(filter == ret.kategori || filter == "alle") {
        const klon = template.cloneNode(true);
     klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
