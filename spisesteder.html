@@ -67,21 +67,22 @@
 
         <article class="spisesteder_box">
             <img class="billede" src="" alt="">
-            <h4 class="navn">*navn</h4>
+            <h4 class="navn"></h4>
 
             <div class="adresse_prisklasse">
                 <div class="adresse_container">
                 <img src="svg/adresse.svg" alt="">
-                <h5 class="adresse">*adresse</h5>    
+                <h5 class="adresse"></h5>    
                 </div>
         
                 <div class="prisklasse_container">
                 <img src="svg/prisklasse.svg" alt="">
-                <h5 class="prisklasse">*prisklasse</h5>     
+                <h5 class="prisniveau"></h5>     
                 </div>
             </div>
 
-            <p class="kortbeskrivelse">*kortbeskrivelse</p> 
+            <p class="overskrift"></p> 
+
             <div class="se_mere_container">
               <button class="se_mere">SE MERE</button>
             </div>   
@@ -276,13 +277,15 @@ function sorterSpisested(){
        const klon = template.cloneNode(true);
     klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
     klon.querySelector(".navn").textContent = ret.navn;
-    klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
-    klon.querySelector(".pris").textContent = ret.pris + ",-";
-    klon.querySelector(".detaljerknap").
+    klon.querySelector(".overskrift").textContent = ret.overskrift;
+    klon.querySelector(".adresse").textContent = ret.gade;
+
+    klon.querySelector(".prisniveau").textContent = ret.prisniveau;
+    // klon.querySelector(".detaljerknap").
 
 
 
-detaljerknap
+// detaljerknap
     section.appendChild(klon);
     }
 
