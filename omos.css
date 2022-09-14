@@ -21,9 +21,6 @@ ul li {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
 }
-ul li:hover {
-  text-decoration: underline;
-}
 .meet {
   display: grid;
   place-items: center center;
