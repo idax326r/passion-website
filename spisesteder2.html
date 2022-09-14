@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="generel.css" />
+    <link rel="stylesheet" href="spisesteder2.css" />
+    <title>THE DELIGHT GUIDE | SPISESTEDER</title>
+  </head>
+  <body>
+
+
+    <header class="banner">
+      <div class="logo">
+        <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
+      </div>
+      <nav class="main-menu">
+        <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
+        <ul>
+          <li><a href="spisesteder.html">Spisesteder</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="valgt"><a href="omos.html">Om os</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+
+
+            <h1 class="lokation_heading">LOKATION?</h1>
+
+            <nav id="nav">
+                <button data-lokation= "alle" class="valgt">ALLE</button>
+                <button data-lokation= "Københavnk" class="koebenhavnk"></button>
+                <button data-lokation= "Nørrebro" class="noerrebro"></button>
+                <button data-lokation= "Vesterbro" class="vesterbro"></button>
+                <button data-lokation= "Frederiksberg" class="frederiksberg"></button>
+              </nav>
+         
+        
+
+<div class="main_spisesteder">
+  <div class="sorter_container">
+    <h2 class="sorter_heading">SORTER</h2>
+  <h3 class="kategoriheading"></h3>
+
+
+    <nav id="sorter">
+            <button data-retter= "alle2" class="sortervalgt">ALLE</button>
+            <button data-prisnivea= "$$$">PRICEY</button>
+            <button data-prisnivea="$$" >LOW-COST</button>
+            <button data-vibe= "Casual vibe">CASUAL VIBE</button>
+            <button data-vibe= "Fancy vibe">FANCY VIBE</button>
+            <button data-typeSpisested= "Restaurant">RESTAURANT</button>
+            <button data-typeSpisested= "Bar">BAR</button>
+            <button data-typeSpisested="Bageri">BAGERI</button>
+    </nav>
+</div>
+
+
+    
+
+<main id="spisesteder_container"></main>
+<template>
+
+        <article class="spisesteder_box">
+            <img class="billede" src="" alt="">
+            <h4 class="navn"></h4>
+
+            <div class="adresse_prisklasse">
+                <div class="adresse_container">
+                <img src="svg/adresse.svg" alt="">
+                <h5 class="adresse"></h5>    
+                </div>
+        
+                <div class="prisklasse_container">
+                <img src="svg/prisklasse.svg" alt="">
+                <h5 class="prisniveau"></h5>     
+                </div>
+            </div>
+
+            <p class="overskrift"></p> 
+
+            <div class="se_mere_container">
+              <button class="se_mere">SE MERE</button>
+            </div>   
+          </article>
+        </template>
+
+
+
+  
+              </div>
+              <button class="se_mere_luk">Tilbage</button>  
+
+         
+     
+
+<div class="top5_instagram_container">
+    <div class="top5_container">
+        <h2 class="top5_heading">TOP 5</h2>
+        <div class="top5_top5">
+           
+                <h4>1. Babylon</h4>
+                <p>Ud til Søerne i København ligger en af byens mest ikoniske bygninger, Søpavillonen…</p><br />
+                
+                <h4>2. Cicchetti</h4>
+                <p>Den lille restaurant på Nørrebro er opkaldt efter det italienske ord for salte snacks og små, lækre retter…</p><br />
+        
+                <h4>3. Baka d’Busk</h4>
+                <p>Den vegetariske restaurant og bistro på Rantzausgade er hurtigt blevet en Nørrebro-favorit for…</p><br />
+        
+                <h4>4. Propaganda</h4>
+                <p>Lige ved den ikoniske mælkebue ved Hovedbanegården ligger Propaganda, der åbnede…</p><br />
+        
+                <h4>5. ØsterGro</h4>
+                <p>Du skal vide, at det er der, ØsterGro, for du kan ikke se det fra gaden. ØsterGro er…</p><br />
+          
+
+      </div>
+
+</div>
+
+  
+    <div class="instagram_container">
+        <h2 class="instagram_heading">INSTAGRAM</h2>
+        <div class="instagram_galleri">
+            <img src="billeder/esmee.webp" alt="instagram_galleri">
+            <img src="billeder/apollo.webp" alt="instagram_galleri">
+            <img src="billeder/tonkin1.webp" alt="instagram_galleri">
+            <img src="billeder/vino2.webp" alt="instagram_galleri">
+            <img src="billeder/pasta1.webp" alt="instagram_galleri">
+            <img src="billeder/otto2.webp" alt="instagram_galleri">
+            <img src="billeder/camino2.webp" alt="instagram_galleri">
+            <img src="billeder/ff2.webp" alt="instagram_galleri">
+            
+        </div>
+    </div>
+
+
+
+</div>
+       
+
+    
+
+
+    <footer>
+        <div class="footer_line"></div>
+        <div class="footer_flex">
+          <p class="footer_left">
+            The Delight Guide <br />
+            Copenhagen, DK <br />
+            + 45 23 45 67 89 <br />
+            info@delightguide.dk <br />
+            CVR 30302072
+          </p>
+  
+          <p class="footer_right">
+            Spisesteder <br />
+            Blog <br />
+            <a href="omos.html">Om os</a>
+          </p>
+        </div>
+  
+        <div class="footer_rettigheder">
+          <p>© 2022 The Delight Guide. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+    <script src="header.js"></script>
+
+
+<script>
+        const endpoint="https://delight-6272.restdb.io/rest/restauranter";
+        const mereinfo={
+            headers:{
+                "x-apikey": "631b0361fdc15b0265f17265"
+            }
+        };
+
+        function myFunction() {
+          const element = document.getElementById("nav");
+          element.scrollIntoView();
+         
+        }
+
+        document.addEventListener("DOMContentLoaded",start)
+            let lokation;
+            let filter = "alle";
+           
+
+            function start(){
+                const filterknapper=document.querySelectorAll("nav button");
+                filterknapper.forEach(knap=> knap.addEventListener("click", filtrerRetter));
+                hentData();
+            }
+
+            function filtrerRetter(){
+                filter = this.dataset.lokation;
+                document.querySelector(".valgt").classList.remove("valgt");
+                this.classList.add("valgt")
+              visRetter();
+            }
+
+        async function hentData(){
+        const JSONdata=await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
+       lokation =await JSONdata.json();
+        console.log("lokation",lokation);
+        visRetter();
+        }
+
+        function visRetter(){
+            const holder =document.querySelector("#spisesteder_container");
+            const skabelon = document.querySelector("template").content;
+            holder.textContent="";
+
+            lokation.forEach(person => {
+            console.log(person);
+            if(filter == person.lokation||filter=="alle"){
+                const klon =skabelon.cloneNode(true);
+                klon.querySelector(".billede").src = "billeder/" + person.billednavn;
+                klon.querySelector(".navn").textContent = person.navn;
+                klon.querySelector(".overskrift").textContent = person.overskrift;
+                klon.querySelector(".adresse").textContent = person.gade;
+                klon.querySelector(".prisniveau").textContent = person.prisniveau;
+                holder.appendChild(klon);
+                }
+            });
+            
+
+        }
+
+        hentData();
+      </script>
+  </body>
+</html>

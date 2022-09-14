@@ -26,26 +26,29 @@
       
     </header>
 
-
-
+     <!-- her skal der ændres i nav menu og og slettes noget class og main -->
 
     <main>
 
         <div class="lokation_container">
             <h1 class="lokation_heading">LOKATION?</h1>
-            <div class="lokation_buttons">
-                <button class="vesterbro"></button>
-                <button class="noerrebro"></button>
-                <button class="koebenhavnk"></button>
-                <button class="frederiksberg"></button>
+
+            <nav class="lokation_buttons">
+                <button data-lokation class="vesterbro"></button>
+                <button data-lokation class="noerrebro"></button>
+                <button data-lokation class="koebenhavnk"></button>
+                <button data-lokation class="frederiksberg"></button>
+              </nav>
             </div>
-        </div>
+       
 
 <div class="main_spisesteder">
   <div class="sorter_container">
     <h2 class="sorter_heading">SORTER</h2>
     <h3 class="kategoriheading"></h3>
 
+
+     <!-- alt nedenunder her tror jeg bare du kan lade stå, der er vidst ingen ændringer som har betydning -->
 
     <nav class="sorter_buttons">
           <!-- // ??????????? der er noget i vejen med restdb og kategorierne herunder. Det er formentlig helt hen i vejret, men jeg kan ikke gennemskue hvordan det skal løses.. -->
@@ -63,7 +66,7 @@
 
     
 
-<section id="spisesteder_container"></section>
+<main id="spisesteder_container"></main>
 <template>
 
         <article class="spisesteder_box">
@@ -82,7 +85,7 @@
                 </div>
             </div>
 
-            <p class="overskrift"></p> 
+            <!-- <p class="overskrift"></p>  -->
 
             <div class="se_mere_container">
               <button class="se_mere">SE MERE</button>
@@ -212,6 +215,7 @@
     <script src="header.js"></script>
 
 
+     <!--SLET HELE DIT SCRIPT OG SÆT DET NYE IND -->
 
 
     <script>
@@ -321,7 +325,7 @@ function sorterSpisested(){
 
     klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
     klon.querySelector(".navn").textContent = ret.navn;
-    klon.querySelector(".overskrift").textContent = ret.overskrift;
+    // klon.querySelector(".overskrift").textContent = ret.overskrift;
     klon.querySelector(".adresse").textContent = ret.gade;
 
     klon.querySelector(".prisniveau").textContent = ret.prisniveau;
