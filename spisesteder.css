@@ -126,17 +126,31 @@ h2{
   text-align: center;
   font-weight: 600;
   margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+h3{
+  font-family: "Work Sans", sans-serif;
+  color: #d67b21;
+  font-size: 100%;
+  font-weight: 600;
   margin-bottom: 2rem;
 }
 
-h4, h5, p, img{
+
+h4, h5, img{
   font-family: "Work Sans", sans-serif;
   color: black;
   margin-bottom: 1rem;
 }
 
 
-
+.main_spisesteder p {
+  font-size: 69%;
+font-weight: lighter;
+color: black;
+margin-bottom: 1rem;
+}
 
 
 
@@ -233,11 +247,17 @@ h4, h5, p, img{
     gap: 5px;
     }
     
+    .sortervalgt {
+      /* background-color: var(--primary-color); */
+      color: white;
+      border: none;  
+    }
+
 
 
 
 /* SPISESTEDER SEKTION */
-.spisesteder_container {
+#spisesteder_container {
 display: grid;
 grid-template-columns: 1fr;
 gap: 5px;
@@ -252,14 +272,14 @@ gap: 5px;
 .adresse_prisklasse {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 1.5rem;
+/* gap: 1.5rem; */
 font-size: 70%;
 
 }
 
 .prisklasse_container, .adresse_container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .adresse_prisklasse img {
@@ -270,6 +290,7 @@ font-size: 70%;
 .navn {
   font-weight: 700;
   letter-spacing: 4px;
+  text-transform: uppercase;
   }
   
   .adresse_prisklasse h5 {
@@ -314,6 +335,93 @@ font-size: 70%;
     background-color: black;
     color: white;
   }
+
+
+
+
+
+
+
+
+/*--------------------------------------------- Selve Popup */
+
+#popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000aa;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+#popup article{
+  position: fixed;
+  background-color: #E3E1D8;
+  width: 18rem;
+  padding: 4%;
+  height: 38rem;
+  top: 3%;
+}
+
+.billedurl{
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+
+.se_mere_info h2 {
+  color: black;
+font-size: 150%;
+font-weight: 800;
+margin-bottom: 0;
+margin-top: 2%;
+text-align: left;
+
+}
+.se_mere_info p {
+font-size: 55%;
+margin-top: 5%;
+/* margin-left: 15%; */
+}
+
+.se_mere_info h5 {
+  font-size: 80%;
+  margin-top: 0%;
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-style: italic;
+}
+
+
+.se_mere_luk {
+  border: 2px;
+  padding: 8px 10px;
+  text-align: center;
+  padding: 3px 15px 3px 15px;
+  cursor: pointer;
+  border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.adr_pris_vibe_serv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+
+  }
+
+.service_container_popup, .vibe_container_popup, .prisklasse_container_popup, .adresse_container_popup {
+  display: flex;
+  height: 2rem;
+  column-gap: 0.5rem;
+
+}
 
 
 
@@ -462,7 +570,6 @@ h1 {
 
 
 
-
 /*--------------------------------------------- LOKATION SEKTION */
 
 
@@ -500,7 +607,7 @@ h1 {
   @media (min-width: 900px) {
 /*--------------------------------------------- GENERELT */
 main {
-  margin-inline: 10rem;
+  margin-inline: 7rem;
 }  
 
 h1 {
@@ -539,10 +646,10 @@ gap: 1rem;
 margin-top: 7rem;
 }
 
-.spisesteder_container {
+#spisesteder_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 20px;
 }
 
 
@@ -587,10 +694,9 @@ margin-top: 7rem;
     }
 
 
-    .spisesteder_container {
+    #spisesteder_container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 5px;
     }
 
     .top5_container h4 {
@@ -601,7 +707,7 @@ margin-top: 7rem;
         font-size: 80%;
       
       }
-
+    
 
 
 }

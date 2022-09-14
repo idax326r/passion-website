@@ -55,35 +55,9 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 45%;
+  width: 40%;
   margin-bottom: 100px;
   margin-top: 50px;
-}
-
-/* FOOTER */
-.footer_line {
-  height: 1px;
-  background: var(--primary-color);
-  width: 85%;
-  margin: 0 auto;
-}
-
-.footer_flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer_left {
-  padding: 30px 10% 30px 10%;
-  line-height: 25px;
-  /* place-self: start; */
-}
-
-.footer_right {
-  padding: 30px 10% 30px 10%;
-  line-height: 25px;
-  /* place-self: start end; */
-  color: var(--primary-color);
 }
 
 a {
@@ -96,11 +70,11 @@ a {
   background-repeat: no-repeat;
   transition: background-size 0.2s ease-in-out;
 }
-footer a:hover,
+/* footer a:hover,
 a:focus,
 a:active {
   background-size: 100% 0.1em;
-}
+} */
 
 header ul a:hover,
 a:focus,
@@ -113,12 +87,6 @@ a:focus,
 a:active {
   transform: scale(1.1);
   transition: 1s;
-}
-
-.footer_rettigheder {
-  background-color: white;
-  display: flex;
-  justify-content: center;
 }
 
 h1 {
@@ -172,20 +140,19 @@ hr {
 
 /* .top_5 {
   background-color: white;
-  border-radius: 20px;
+
   padding: 30px;
 } */
 
 figcaption {
   background-color: white;
-  border-radius: 20px;
   padding: 30px;
   transform: translateY(-15px);
 }
 
 #holder {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   margin-top: 50px;
   margin-bottom: 110px;
 }
@@ -196,6 +163,7 @@ article {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 ul li {
@@ -205,6 +173,38 @@ ul li {
 
 p {
   font-family: "Work Sans", sans-serif;
+}
+
+h6 {
+  overflow: hidden;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 35px;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  letter-spacing: 18px;
+}
+
+h6:before,
+h6:after {
+  background-color: var(--primary-color);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+}
+
+h6:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h6:after {
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 div button {
