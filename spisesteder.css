@@ -115,7 +115,7 @@ main {
 h1 {
   font-size: 50px;
   font-family: "Abril Fatface", cursive;
-  margin-bottom: 40px;
+  /* margin-bottom: 1rem; */
   text-align: center;
 }
 
@@ -163,20 +163,31 @@ margin-bottom: 1rem;
 
 /*her skal den hedder #nav*/
 
-.lokation_buttons {
+#nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    height: 21rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    gap: 15px;
+    height: 10rem;
     }
     
+
+    #helekbh {
+      background-image: url(svg/helekbh.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #helekbh:hover {
+      background-image: url(svg/helekbh_hover.svg);
+
+    }
+
 
 .vesterbro {
     background-image: url(svg/vesterbro.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
-}
+    background-position: center;
+  }
 .vesterbro:hover {
     background-image: url(svg/vesterbro_hover.svg);
   }
@@ -186,8 +197,8 @@ margin-bottom: 1rem;
     background-image: url(svg/noerrebro.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
-}
+    background-position: center;
+  }
 .noerrebro:hover {
     background-image: url(svg/noerrebro_hover.svg);
   }
@@ -197,8 +208,8 @@ margin-bottom: 1rem;
     background-image: url(svg/frederiksberg.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
-}
+    background-position: center;
+  }
 .frederiksberg:hover {
     background-image: url(svg/frederiksberg_hover.svg);
   }
@@ -208,8 +219,8 @@ margin-bottom: 1rem;
     background-image: url(svg/koebenhavnk.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
-}
+    background-position: center;
+  }
 .koebenhavnk:hover {
     background-image: url(svg/koebenhavnk_hover.svg);
   }
@@ -321,6 +332,7 @@ font-size: 70%;
 .se_mere_container {
   display: flex;
   justify-content: right;
+  margin-top: 2rem;
 }
 
 .se_mere {
@@ -370,7 +382,7 @@ font-size: 70%;
   width: 18rem;
   padding: 1rem;
   height: 38rem;
-  top: 3%;
+  top: 20%;
 }
 
 .billedurl{
@@ -585,7 +597,7 @@ h1 {
         grid-template-rows: 1fr;
         gap: 15px;
         height: 9rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         margin-inline: 3rem;
         }
 

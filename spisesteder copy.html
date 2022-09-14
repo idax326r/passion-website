@@ -30,15 +30,19 @@
 
     <main>
 
+        <div class="lokation_container">
             <h1 class="lokation_heading">LOKATION?</h1>
 
+            <!-- <nav class="lokation_buttons"> -->
               <nav id="nav">
                 <button data-lokation= "alle" id="helekbh" class="valgt"></button>
+
                 <button data-lokation= "Københavnk" class="koebenhavnk"></button>
                 <button data-lokation= "Nørrebro" class="noerrebro"></button>
                 <button data-lokation= "Vesterbro" class="vesterbro"></button>
                 <button data-lokation= "Frederiksberg" class="frederiksberg"></button>
               </nav>
+            </div>
        
 
 <div class="main_spisesteder">
@@ -50,6 +54,7 @@
      <!-- alt nedenunder her tror jeg bare du kan lade stå, der er vidst ingen ændringer som har betydning -->
 
     <nav class="sorter_buttons">
+          <!-- // ??????????? der er noget i vejen med restdb og kategorierne herunder. Det er formentlig helt hen i vejret, men jeg kan ikke gennemskue hvordan det skal løses.. -->
             <button data-retter= "alle" class="sortervalgt">ALLE</button>
             <button data-retter= "prisniveau">PRICEY</button>
             <button data-retter= "prisniveau" >LOW-COST</button>
@@ -210,21 +215,6 @@
         </div>
       </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="header.js"></script>
 
 
@@ -232,7 +222,20 @@
 
 
     <script>
-                
+
+      //------------- Lytter efter om DOM er loadet og går til start funktion
+      document.addEventListener("DOMContentLoaded", start);
+      
+      let retter;
+      let filter = "alle";
+      
+      
+      
+      
+      
+      //------------- Start funktion
+      function start (){
+      
       //------------- Find dataerne og load dem
       
       const url = "https://delight-6272.restdb.io/rest/restauranter";
@@ -242,51 +245,64 @@
           }
       };
       
-      
-        function myFunction() {
-          const element = document.getElementById("nav");
-          element.scrollIntoView();
-         
-        }
-
-
-
-
-      //------------- Lytter efter om DOM er loadet og går til start funktion
-      document.addEventListener("DOMContentLoaded", start);
-      
-      let lokation;
-      let filter = "alle";
-
-      
-      //------------- Start funktion
-      function start (){
-        const filterknapper=document.querySelectorAll("#nav button");
-                filterknapper.forEach(knap=> knap.addEventListener("click", filtrerRetter));
-                hentData();
-      }
-
-      function filtrerRetter(){
-                filter = this.dataset.lokation;
-                document.querySelector(".valgt").classList.remove("valgt");
-                this.classList.add("valgt")
-              visRetter();
-            }
-
-
-
       async function hentData(){
           const respons = await fetch (url, options);
-          lokation = await respons.json();
-          console.log(lokation);
-          visRetter();
+          retter = await respons.json();
+          console.log(retter);
+          vis();
       }
       
       
       
-      
-      function visRetter(){
 
+
+
+//------------- Tilføj eventlistener til lokation-knapper
+
+const lokationknapper = document.querySelectorAll (".lokation_buttons button");
+lokationknapper.forEach(knap => knap.addEventListener ("click", lokSorterSpisested));
+
+
+//------------- Funktion lokSorterSpisested (sker når man trykker på lokation-knapper)
+
+function lokSorterSpisested(){
+  console.log("lokSorterSpisested funktion virker!");
+
+  vis();
+}
+
+
+
+//------------- Tilføj eventlistener til sorter-knapper
+
+const sorterknapper = document.querySelectorAll (".sorter_buttons button");
+sorterknapper.forEach(knap => knap.addEventListener ("click", sorterSpisested));
+
+
+//------------- Funktion sorterSpisested (sker når man trykker på sorter-knapper)
+
+function sorterSpisested(){
+  console.log("sorterSpisested funktion virker!");
+
+  const heading = document.querySelector (".kategoriheading")
+    filter = this.dataset.retter
+    heading.textContent = this.textContent;
+
+  document.querySelector(".sortervalgt").classList.remove("sortervalgt");
+  this.classList.add("sortervalgt");
+    vis();
+
+}
+
+
+      
+
+      
+      
+      
+      
+      
+      
       //------------- Constanter laves til section og template
       
       const section = document.querySelector("section")
@@ -295,7 +311,7 @@
       
       // //------------- vis funktion 
       
-      
+       function vis() {
         console.log("vis funktion virker!");
 
       // //------------- Reset alt i section
@@ -303,9 +319,10 @@
         section.textContent="";
 
 
-        lokation.forEach((ret => {
+        retter.forEach((ret => {
     
-    if(filter == ret.lokation || filter == "alle") {
+          // ??????????? Der er noget i vejen med restdb og linjen herunder. Jeg har tydeligvis ikke forstået hvordan alt det med kategorier og fields osv fungerer.. 
+    if(filter == ret.kategori || filter == "alle") {
        const klon = template.cloneNode(true);
     klon.querySelector(".se_mere").addEventListener("click", ()=> visDetaljer(ret));
 
@@ -348,21 +365,5 @@ popup.querySelector(".vibe_popup").textContent = rettensData.vibe;
       
       hentData(); 
       
-      
+      }
       </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
