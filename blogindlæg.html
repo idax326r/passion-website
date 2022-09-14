@@ -125,7 +125,9 @@
   align-items: center;
   margin: 10px;
 }
-
+#instagram_galleri img:hover{
+    scale: 180%;
+}
 @media (max-width: 750px) {
     .tekst{
     display: grid;
@@ -213,8 +215,6 @@
                 <img src="billeder/insta19.webp" alt="">
                 <img src="billeder/insta20.webp" alt="">
                 <img src="billeder/insta21.webp" alt="">
-                
-               
             </article>
         </section>
     </main>
@@ -238,24 +238,23 @@
                 headers:myHeaders
             });
 
-        personer =await respons.json();
-        console.log({personer});
-        visPersoner();
+        artikel =await respons.json();
+        console.log({artikel});
+        visArtikel();
             }
             hentData();
 
-            function visPersoner(){
-            //document.querySelector("h2").textContent=personer.navn + " " +personer.efternavn;
+            function visArtikel(){
 
-            document.querySelector(".mad p").textContent=personer.mad;
-            document.querySelector(".sted p").textContent=personer.stedet;
-            document.querySelector("#overskrift").textContent=personer.navn;
-            document.querySelector(".article1").src = "billeder/" + personer.billednavn;
-            document.querySelector(".article2").src = "billeder/" + personer.img;
-            document.querySelector(".article3").src = "billeder/" + personer.img2;
-            document.querySelector(".instagram_placering p").textContent=personer.adresse;
-            document.querySelector(".instagram_placering h3").textContent=personer.navn;
-            document.querySelector(".sted h3").textContent=`Adresse: ${personer.adresse}`;
+            document.querySelector(".mad p").textContent=artikel.mad;
+            document.querySelector(".sted p").textContent=artikel.stedet;
+            document.querySelector("#overskrift").textContent=artikel.navn;
+            document.querySelector(".article1").src = "billeder/" + artikel.billednavn;
+            document.querySelector(".article2").src = "billeder/" + artikel.img;
+            document.querySelector(".article3").src = "billeder/" + artikel.img2;
+            document.querySelector(".instagram_placering p").textContent=artikel.adresse;
+            document.querySelector(".instagram_placering h3").textContent=artikel.navn;
+            document.querySelector(".sted h3").textContent=`Adresse: ${artikel.adresse}`;
             }
 
             hentData();
