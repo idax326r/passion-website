@@ -161,6 +161,8 @@ margin-bottom: 1rem;
 
 /*--------------------------------------------- LOKATION SEKTION */
 
+/*her skal den hedder #nav*/
+
 .lokation_buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,6 +225,7 @@ margin-bottom: 1rem;
         margin-bottom: 3rem;
     }
     
+
     .sorter_buttons button{
         color: #d67b21;
         border: 2px;
@@ -240,7 +243,8 @@ margin-bottom: 1rem;
         color: white;
         border: none;
       }
-    
+   
+
     .sorter_buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
