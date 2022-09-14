@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Forside</title>
     <link rel="stylesheet" href="generel.css" />
     <link rel="stylesheet" href="forside.css" />
+        <link rel="icon" type="image/svg+xml" href="svg/logo.svg" />
   </head>
   <body>
     <header class="banner">
@@ -16,17 +17,15 @@
       <nav class="main-menu">
         <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
         <ul>
-          <li><a href="spisesteder.html">Spisesteder</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="valgt"><a href="spisesteder.html">Spisesteder</a></li>
+          <li class="valgt"><a href="blog.html">Blog</a></li>
           <li class="valgt"><a href="omos.html">Om os</a></li>
         </ul>
       </nav>
       <hr />
     </header>
     <section>
-      <!-- <div class="stort_logo"> -->
         <img class="stort_logo" src="svg/logo_u_tekst.svg" alt="logo" /></a>
-      <!-- </div> -->
 
       <a href="#velkommen"><button class="pil"></button></a>
       <h1 id="velkommen">VELKOMMEN</h1>
@@ -91,7 +90,7 @@
       </template>
     </section>
     <footer>
-      <div class="footer_line"></div>
+    <hr />
       <div class="footer_flex">
         <p class="footer_left">
           The Delight Guide <br />
@@ -107,11 +106,11 @@
           <a href="omos.html">Om os</a>
         </p>
       </div>
-
+    </footer>
       <div class="footer_rettigheder">
         <p>© 2022 The Delight Guide. All Rights Reserved.</p>
       </div>
-    </footer>
+
 
     <script>
       const endpoint = "https://delight-6272.restdb.io/media";
@@ -146,6 +145,19 @@
       }
 
       hentData();
+
+
+// $("a[class^='underlinetoggle']").click(function () {
+//   $(this).siblings().removeClass('.underline');
+//   $(this).toggleClass('.underline');
+// });
+
+$(".anchorToggle").click(function () {
+    if ($(this).css('text-decoration').indexOf("none") > -1) {
+        $(this).css('text-decoration', 'underline');
+    } else $(this).css('text-decoration', 'none');
+});
+
     </script>
   </body>
 </html>
