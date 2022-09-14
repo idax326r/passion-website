@@ -160,13 +160,11 @@ margin-bottom: 1rem;
 
 
 /*--------------------------------------------- LOKATION SEKTION */
-
-/*her skal den hedder #nav*/
-
 #nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    gap: 15px;
-    height: 10rem;
+    grid-template-columns: 1fr 1fr 1fr;    
+    column-gap: 28px;
+height: 16rem;
     }
     
 
@@ -225,48 +223,22 @@ margin-bottom: 1rem;
     background-image: url(svg/koebenhavnk_hover.svg);
   }
 
+  .amager {
+    background-image: url(svg/amager.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.amager:hover {
+    background-image: url(svg/amager_hover.svg);
+  }
 
 
 
+ 
+  
 
 
-/*--------------------------------------------- SORTER SEKTION */
-
-    .sorter_container {
-        margin-bottom: 3rem;
-    }
-    
-
-    .sorter_buttons button{
-        color: #d67b21;
-        border: 2px;
-        padding: 8px 10px;
-        text-align: center;
-        padding: 3px 15px 3px 15px;
-        cursor: pointer;
-        border-style: solid;
-        font-family: "Work Sans", sans-serif;
-        font-weight: 500;
-        font-size: 0.8rem; 
-    }
-    .sorter_buttons button:hover {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-      }
-   
-
-    .sorter_buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    }
-    
-    .sortervalgt {
-      /* background-color: var(--primary-color); */
-      color: white;
-      border: none;  
-    }
 
 
 
@@ -275,7 +247,7 @@ margin-bottom: 1rem;
 #spisesteder_container {
 display: grid;
 grid-template-columns: 1fr;
-gap: 5px;
+gap: 1rem;
 }
 
 .spisesteder_box {
@@ -287,14 +259,16 @@ gap: 5px;
 .adresse_prisklasse {
 display: grid;
 grid-template-columns: 1fr 1fr;
-/* gap: 1.5rem; */
+gap: 1.5rem;
 font-size: 70%;
+align-items: center;
 
 }
 
-.prisklasse_container, .adresse_container {
+.prisklasse_container, .adresse_container, .service_container, .vibe_container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    
 }
 
 .adresse_prisklasse img {
@@ -331,7 +305,7 @@ font-size: 70%;
 
 .se_mere_container {
   display: flex;
-  justify-content: right;
+  justify-content: left;
   margin-top: 2rem;
 }
 
@@ -448,6 +422,10 @@ margin-top: 5%;
 
 
   /*--------------------------------------------- TOP 5 */
+  .top5_container {
+    display: none;
+  }
+
 
   .top5_container p {
     font-weight: lighter;
@@ -474,6 +452,10 @@ text-transform: uppercase;
  gap: 1rem;
  margin-bottom: 5rem; 
  }
+
+.instagram_container {
+  display:none;
+}
 
 
 
@@ -592,14 +574,7 @@ h1 {
 /*--------------------------------------------- LOKATION SEKTION */
 
 
-.lokation_buttons {
-        display: grid;
-        grid-template-rows: 1fr;
-        gap: 15px;
-        height: 9rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        margin-inline: 3rem;
-        }
+
 
 
 .vesterbro {
@@ -638,7 +613,10 @@ h2 {
   text-align: left;
 }
 
+#nav {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;    
 
+        }
 
 
 /*--------------------------------------------- TOP 5 SEKTION */
@@ -654,14 +632,21 @@ font-size: 80%;
 
 .top5_container {
   margin-bottom: 3rem;
+  display: contents;
 }
+
+
+.instagram_container {
+  display:contents;
+}
+
 
 /*--------------------------------------------- SPISESTEDER SEKTION */
 
 .main_spisesteder {
   display: grid;
 grid-template-columns: 1fr 3fr;
-gap: 1rem;
+gap: 5rem;
 margin-top: 7rem;
 }
 
@@ -705,8 +690,9 @@ margin-top: 7rem;
 
 
 @media (min-width: 1200px) { 
-  .lokation_buttons {
+  #nav {
     margin-inline: 10rem;
+    margin-top: 2rem;
     } 
     h1 {
       letter-spacing: 10px;    
