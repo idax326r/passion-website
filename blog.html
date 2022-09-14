@@ -123,7 +123,7 @@ footer a:hover,a:focus,a:active {
   font-size: 35px;
   font-family: "Abril Fatface", cursive;
   margin-bottom: 70px;
-  margin-top: 70px;
+  margin-top: -10px;
   letter-spacing: 18px;
       }
       h1:before,h1:after {
@@ -187,8 +187,9 @@ footer a:hover,a:focus,a:active {
         <li class="valgt"><a href="omos.html">Om os</a></li>
       </ul>
     </nav>
-    <hr />
   </header>
+
+
   <h1>BLOG</h1>
 <main id="holder"></main>
 <template>
@@ -200,6 +201,7 @@ footer a:hover,a:focus,a:active {
           </div>
       </article>
 </template>
+
 
 <footer>
   <div class="footer_line"></div>
@@ -243,20 +245,20 @@ footer a:hover,a:focus,a:active {
             const holder =document.querySelector("#holder");
             const skabelon = document.querySelector("template").content;
 
-            json.forEach(person => {
+            json.forEach(artikel => {
                  
-            console.log(person);
+            console.log(artikel);
              const klon  =skabelon.cloneNode(true);
-             klon.querySelector("button").addEventListener("click",()=>visDetaljer(person));
-             klon.querySelector(".catchLine").textContent=person.overskrift;
-             klon.querySelector("img").src = "billeder/" + person.billednavn;
+             klon.querySelector("button").addEventListener("click",()=>visDetaljer(artikel));
+             klon.querySelector(".catchLine").textContent=artikel.overskrift;
+             klon.querySelector("img").src = "billeder/" + artikel.billednavn;
              holder.appendChild(klon);
             });
         }
 
-      function visDetaljer(person) {
-        console.log(person);
-        location.href=`blogindlæg.html?id=${person._id}`;
+      function visDetaljer(artikel) {
+        console.log(artikel);
+        location.href=`blogindlæg.html?id=${artikel._id}`;
         }
             
         hentData();
