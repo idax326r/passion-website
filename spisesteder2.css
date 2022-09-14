@@ -1,0 +1,631 @@
+/* SPISESTEDER SIDE CSS */
+
+
+/* --------------------------------------------- HEADER */
+
+ul li {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+  }
+  ul li:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .banner {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+  }
+  .main-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    justify-content: end;
+    padding: 35px;
+  }
+  
+  
+  
+  
+  /* ------------------------ BURGERMENU */
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none; /* Skjul knappen som standard */
+  }
+  .logo {
+    height: 100px;
+    width: 100px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+  
+  .logo img {
+    height: auto;
+    width: 100%;
+  }
+  
+  @media (max-width: 650px) {
+    .toggle-btn {
+      display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+      position: absolute;
+      right: 35px;
+      top: 35px;
+    }
+  
+    .main-menu {
+      display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+    }
+  
+    .main-menu ul {
+      display: none; /* Fjern menu-listen som standard */
+    }
+  
+    .main-menu.shown ul {
+      /* Vis menu-listen, når klassen ".shown" er til stede */
+      gap: 10px;
+      border-top: 1px solid var(--primary-color);
+      padding-top: 1rem;
+      display: flex;
+      flex: 1 1 100%;
+      flex-flow: column;
+      padding: 15px;
+    }
+    hr {
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*------------------------------------------------------------------- MEDIA MAX WIDTH 650px */
+  
+  
+  /* ---------------------------------------------GENERELT */
+  
+  html {
+    --primary-color: #d67b21;
+    --background-color: #efeeea;
+    --green-color: #9cc298;
+    --hover-color: ;
+  }
+  
+  
+  
+  main {
+    margin-inline: 2.5rem;
+  }  
+  
+  h1 {
+    font-size: 50px;
+    font-family: "Abril Fatface", cursive;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  h2{
+    font-family: "Work Sans", sans-serif;
+    color: #d67b21;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3{
+    font-family: "Work Sans", sans-serif;
+    color: #d67b21;
+    font-size: 100%;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  
+  h4, h5, img{
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .main_spisesteder p {
+    font-size: 69%;
+  font-weight: lighter;
+  color: black;
+  margin-bottom: 1rem;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /*--------------------------------------------- LOKATION SEKTION */
+  
+  #nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: -15px;
+      height: 15rem;
+      padding-left: 40px;
+      padding-right: 40px;
+      }
+      
+  
+  .vesterbro {
+      background-image: url(svg/vesterbro.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+  }
+  .vesterbro:hover {
+      background-image: url(svg/vesterbro_hover.svg);
+    }
+  
+  
+  .noerrebro {
+      background-image: url(svg/noerrebro.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+  }
+  .noerrebro:hover {
+      background-image: url(svg/noerrebro_hover.svg);
+    }
+  
+  
+  .frederiksberg {
+      background-image: url(svg/frederiksberg.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+  }
+  .frederiksberg:hover {
+      background-image: url(svg/frederiksberg_hover.svg);
+    }
+  
+  
+  .koebenhavnk {
+      background-image: url(svg/koebenhavnk.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+  }
+  .koebenhavnk:hover {
+      background-image: url(svg/koebenhavnk_hover.svg);
+    }
+  
+   
+    
+  
+  
+  
+  
+  
+  
+  /*--------------------------------------------- SORTER SEKTION */
+  
+      .sorter_container {
+          margin-bottom: 3rem;
+      }
+      
+      #sorter button{
+          color: #d67b21;
+          border: 2px;
+          padding: 8px 10px;
+          text-align: center;
+          padding: 3px 15px 3px 15px;
+          cursor: pointer;
+          border-style: solid;
+          font-family: "Work Sans", sans-serif;
+          font-weight: 500;
+          font-size: 0.8rem; 
+      }
+      #sorter button:hover {
+          background-color: var(--primary-color);
+          color: white;
+          border: none;
+        }
+      
+      #sorter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      }
+      
+      .sortervalgt {
+        /* background-color: var(--primary-color); */
+        color: white;
+        border: none;  
+      }
+  
+  
+  
+  
+  /* SPISESTEDER SEKTION */
+  #spisesteder_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  }
+  
+  .spisesteder_box {
+      padding: 1.5rem;
+      background-color: white;
+  
+  }
+  
+  .adresse_prisklasse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 1.5rem; */
+  font-size: 70%;
+  
+  }
+  
+  .prisklasse_container, .adresse_container {
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+  .adresse_prisklasse img {
+      width: 1.3rem;
+      margin-right: 1rem;
+  }
+  
+  .navn {
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    }
+    
+    .adresse_prisklasse h5 {
+      font-style: italic;
+    
+    }
+    
+    .kortbeskrivelse {
+    font-weight: 300;
+    font-size: 67%;
+    }
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  /*--------------------------------------------- SE MERE KNAP */
+  
+  
+  .se_mere_container {
+    display: flex;
+    justify-content: right;
+  }
+  
+  .se_mere {
+      border: 2px;
+      padding: 8px 10px;
+      text-align: center;
+      padding: 3px 15px 3px 15px;
+      cursor: pointer;
+      border-style: solid;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+  }
+  
+  .se_mere:hover {
+      background-color: black;
+      color: white;
+    }
+  
+  
+  
+  
+  
+  
+    /*--------------------------------------------- TOP 5 */
+  
+    .top5_container p {
+      font-weight: lighter;
+      color: #d67b21;
+  
+    }
+  
+    .top5_container h4 {
+  color: #d67b21;
+  font-weight: 600;
+  font-size: 120%;
+  text-transform: uppercase;
+  
+    }
+  
+  
+  
+  
+  /*--------------------------------------------- INSTAGRAM */
+  
+    .instagram_galleri{
+      display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   margin-bottom: 5rem; 
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*--------------------------------------------- FOOTER */
+  
+    .footer_line {
+      height: 3px;
+      background: var(--primary-color);
+      width: 85%;
+      margin: 0 auto;
+    }
+    
+    .footer_flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .footer_left {
+      padding: 30px;
+      line-height: 25px;
+      /* place-self: start; */
+    }
+    
+    .footer_right {
+      padding: 30px;
+      line-height: 25px;
+      /* place-self: start end; */
+      color: var(--primary-color);
+    }
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      background-image: linear-gradient(#d67b21, #d67b21);
+      background-size: 0% 0.1em;
+      background-position-y: 100%;
+      background-position-x: 0%;
+      background-repeat: no-repeat;
+      transition: background-size 0.2s ease-in-out;
+    }
+    footer a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 0.1em;
+    }
+    
+    header a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 0.1em;
+    }
+    
+    .footer_rettigheder {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    /*------------------------------------------------------------------- MEDIA MIN WIDTH 650px */
+  
+  
+  
+    @media (min-width: 650px) {
+  /*--------------------------------------------- GENERELT */
+  main {
+    margin-inline: 5rem;
+  }  
+  
+  h1 {
+    font-size: 60px;
+  
+  }
+  
+  
+  
+  /*--------------------------------------------- LOKATION SEKTION */
+  
+  
+  .lokation_buttons {
+          display: grid;
+          grid-template-rows: 1fr;
+          gap: 15px;
+          height: 9rem;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          margin-inline: 3rem;
+          }
+  
+  
+  .vesterbro {
+      background-position: center;
+  }
+  
+  .noerrebro {
+      background-position: center;
+  }
+  .frederiksberg {
+      background-position: center;
+  }
+  .koebenhavnk {
+      background-position: center;
+  }
+  
+    }
+  
+  
+  
+  
+  /*------------------------------------------------------------------- MEDIA MIN WIDTH 900px */
+  
+    @media (min-width: 900px) {
+  /*--------------------------------------------- GENERELT */
+  main {
+    margin-inline: 7rem;
+  }  
+  
+  h1 {
+    font-size: 80px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    text-align: left;
+  }
+  
+  
+  
+  
+  /*--------------------------------------------- TOP 5 SEKTION */
+  
+  .top5_container h4 {
+  font-size: 80%;
+  }
+  
+  .top5_container p {
+    font-size: 57%;
+  
+  }
+  
+  .top5_container {
+    margin-bottom: 3rem;
+  }
+  
+  /*--------------------------------------------- SPISESTEDER SEKTION */
+  
+  .main_spisesteder {
+    display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  margin-top: 7rem;
+  }
+  
+  #spisesteder_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  
+  /*--------------------------------------------- SORTER SEKTION */
+  
+  .sorter_buttons button {
+    font-size: 51%;
+  }
+  
+    .sorter_buttons {
+        grid-template-columns: 1fr 1fr;
+        }
+  
+  /*--------------------------------------------- LOKATION SEKTION */
+  
+  .lokation_buttons {
+      margin-inline: 3rem;
+      } 
+  
+  
+  
+    
+        
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /*------------------------------------------------------------------- MEDIA MIN WIDTH 1200px */
+  
+  
+  @media (min-width: 1200px) { 
+    .lokation_buttons {
+      margin-inline: 10rem;
+      } 
+      h1 {
+        letter-spacing: 10px;    
+      }
+  
+  
+      #spisesteder_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+  
+      .top5_container h4 {
+        font-size: 90%;
+        }
+        
+        .top5_container p {
+          font-size: 80%;
+        
+        }
+      
+  
+  
+  }

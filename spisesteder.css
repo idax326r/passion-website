@@ -161,6 +161,8 @@ margin-bottom: 1rem;
 
 /*--------------------------------------------- LOKATION SEKTION */
 
+/*her skal den hedder #nav*/
+
 .lokation_buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,6 +225,7 @@ margin-bottom: 1rem;
         margin-bottom: 3rem;
     }
     
+
     .sorter_buttons button{
         color: #d67b21;
         border: 2px;
@@ -240,7 +243,8 @@ margin-bottom: 1rem;
         color: white;
         border: none;
       }
-    
+   
+
     .sorter_buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -320,20 +324,23 @@ font-size: 70%;
 }
 
 .se_mere {
-    border: 2px;
-    padding: 8px 10px;
-    text-align: center;
-    padding: 3px 15px 3px 15px;
-    cursor: pointer;
-    border-style: solid;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
+  color: #d67b21;
+  border: 2px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+  border-style: solid;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem; 
+  padding: 3px 15px 3px 15px;
+
 }
 
 .se_mere:hover {
-    background-color: black;
-    color: white;
+  background-color: var(--primary-color);
+  color: white;
+  /* border: none; */
   }
 
 
@@ -361,7 +368,7 @@ font-size: 70%;
   position: fixed;
   background-color: #E3E1D8;
   width: 18rem;
-  padding: 4%;
+  padding: 1rem;
   height: 38rem;
   top: 3%;
 }
