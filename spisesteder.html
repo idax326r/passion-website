@@ -13,20 +13,19 @@
 
 
     <header class="banner">
-      <div class="logo">
+      <div class="logo_header">
         <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
       </div>
       <nav class="main-menu">
         <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
         <ul>
-          <li><a href="spisesteder.html">Spisesteder</a></li>
+          <li class="valgt"><a href="spisesteder.html">Spisesteder</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li class="valgt"><a href="omos.html">Om os</a></li>
+          <li><a href="omos.html">Om os</a></li>
         </ul>
       </nav>
-      
+      <hr />
     </header>
-
 
 
 
@@ -295,27 +294,23 @@
     
     if(filter == ret.lokation || filter == "alle") {
        const klon = template.cloneNode(true);
+
     klon.querySelector(".se_mere").addEventListener("click", ()=> visDetaljer(ret));
 
     klon.querySelector(".billede").src = "billeder/" + ret.billednavn;
     klon.querySelector(".navn").textContent = ret.navn;
     klon.querySelector(".overskrift").textContent = ret.lilleTekst;
     klon.querySelector(".adresse").textContent = ret.lokation;
-
     klon.querySelector(".prisniveau").textContent = ret.prisniveau;
-    // klon.querySelector(".service").textContent = ret.service;
-    // klon.querySelector(".vibe").textContent = ret.vibe;
 
-
-
-// detaljerknap
     section.appendChild(klon);
     }
 
 }));
 
-document.querySelector(".se_mere_luk").addEventListener("click", () => (popup.style.display = "none"));
 
+
+document.querySelector(".se_mere_luk").addEventListener("click", () => (popup.style.display = "none"));
 
 function visDetaljer(rettensData){
 console.log("popup virker lidt");
