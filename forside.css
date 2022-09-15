@@ -237,9 +237,9 @@ h5 {
 @media (max-width: 650px) {
   .toggle-btn {
     display: block;
-    position: relative;
+    position: absolute;
     right: 35px;
-    top: -10px;
+    top: 35px;
   }
   .main-menu {
     display: contents;
