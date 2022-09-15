@@ -12,6 +12,17 @@ h1 {
   font-family: "Abril Fatface", cursive;
   margin-bottom: 20px;
 }
+
+h2 {
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 1.5rem;
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
 p {
   max-width: 65ch;
   font-family: "Work Sans", sans-serif;
