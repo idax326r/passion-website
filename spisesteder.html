@@ -50,7 +50,6 @@
   <div class="top5_container">
       <h2 class="top5_heading">UGENS TOP 5</h2>
       <div class="top5_top5">
-         
               <h4>1. Babylon</h4>
               <p>Ud til Søerne i København ligger en af byens mest ikoniske bygninger, Søpavillonen…</p><br />
               
@@ -65,7 +64,6 @@
       
               <h4>5. ØsterGro</h4>
               <p>Du skal vide, at det er der, ØsterGro, for du kan ikke se det fra gaden. ØsterGro er…</p><br />
-      
       </div>
   </div>
 
@@ -85,11 +83,13 @@
           
       </div>
   </div>
-
-
-
 </div>
      
+
+
+
+
+
 <div class="spisesteder_2">
 
 <section id="spisesteder_container"></section>
@@ -252,6 +252,7 @@
                 filterknapper.forEach(knap=> knap.addEventListener("click", filtrerRetter));
                 hentData();
       }
+      //------------- filtrerRetter funktion - kaldes når man klikker på lokationsknapperne. Går herefter til visRetter funktionen
 
       function filtrerRetter(){
                 filter = this.dataset.lokation;
@@ -271,23 +272,24 @@
       
       
       
-      
+    //------------- visRetter funktionen
+
       function visRetter(){
+        console.log("visRetter funktion virker!");
 
       //------------- Constanter laves til section og template
       
       const section = document.querySelector("section")
       const template = document.querySelector("template").content;
       
+          
       
-      // //------------- vis funktion 
-      
-      
-        console.log("vis funktion virker!");
 
       // //------------- Reset alt i section
 
         section.textContent="";
+
+      // //------------- tilføjer data fra restdb efter hvilke lokationer der er valgt
 
 
         lokation.forEach((ret => {
@@ -309,6 +311,7 @@
 }));
 
 
+      // //------------- popup boks som kommer når man klikker på se mere knappen
 
 document.querySelector(".se_mere_luk").addEventListener("click", () => (popup.style.display = "none"));
 
