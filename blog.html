@@ -21,9 +21,9 @@
       @media (max-width: 650px) {
         .toggle-btn {
           display: block;
-          position: relative;
+          position: absolute;
           right: 35px;
-          top: -10px;
+          top: 35px;
         }
         .main-menu {
           display: contents;
@@ -105,7 +105,7 @@
         font-weight: 700;
       }
 
-      button {
+      .button_blog {
         background-color: white;
         font-size: 0.6rem;
         border: solid #d67b21 1px;
@@ -115,7 +115,7 @@
         left: 3px;
         padding: 3px;
       }
-      button:hover {
+      .button_blog:hover {
         background-color: #d67b21;
         color: white;
       }
@@ -157,7 +157,7 @@
         <img src="" alt="" />
         <div id="tekst">
           <h3 class="catchLine"></h3>
-          <button>LÆS ANMELDELSE</button>
+          <button class="button_blog">LÆS ANMELDELSE</button>
         </div>
       </article>
     </template>
@@ -205,7 +205,7 @@
         json.forEach((artikel) => {
           console.log(artikel);
           const klon = skabelon.cloneNode(true);
-          klon.querySelector("button").addEventListener("click", () => visDetaljer(artikel));
+          klon.querySelector(".button_blog").addEventListener("click", () => visDetaljer(artikel));
           klon.querySelector(".catchLine").textContent = artikel.overskrift;
           klon.querySelector("img").src = "billeder/" + artikel.billednavn;
           holder.appendChild(klon);
@@ -218,6 +218,23 @@
       }
 
       hentData();
+
+      // Lav variablen "btn", der henviser til ".toggle-btn"
+      const btn = document.querySelector(".toggle-btn");
+      // Lav variablen "menu", der henviser til ".main-menu"
+      const menu = document.querySelector(".main-menu");
+
+      // Lav funktionen "toggleMenu()" med følgende funktionalitet
+      function toggleMenu() {
+        // a) toggle klassen "shown" på menu vha. classList.toggle
+        menu.classList.toggle("shown");
+
+        // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
+        const menuShown = classList.contains("shown");
+      }
+
+      // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
+      btn.addEventListener("click", toggleMenu);
     </script>
   </body>
 </html>
