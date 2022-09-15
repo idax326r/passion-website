@@ -101,7 +101,6 @@ html {
   --primary-color: #d67b21;
   --background-color: #efeeea;
   --green-color: #9cc298;
-  --hover-color: ;
 }
 
 
@@ -143,12 +142,7 @@ h4, h5, img{
 }
 
 
-.main_spisesteder p {
-font-size: 69%;
-font-weight: lighter;
-color: black;
-margin-bottom: 1rem;
-}
+
 
 
 
@@ -225,7 +219,7 @@ margin-top: 2rem;
     background-image: url(svg/koebenhavnk_hover.svg);
   }
 
-  .amager {
+.amager {
     background-image: url(svg/amager.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -244,8 +238,9 @@ margin-top: 2rem;
 
 
 
+/*--------------------------------------------- SPISESTEDER SEKTION */
 
-/* SPISESTEDER SEKTION */
+
 #spisesteder_container {
 display: grid;
 grid-template-columns: 1fr;
@@ -294,6 +289,12 @@ align-items: center;
   font-size: 67%;
   }
   
+  .main_spisesteder p {
+    font-size: 69%;
+    font-weight: lighter;
+    color: black;
+    margin-bottom: 1rem;
+    }
   
   
 
@@ -302,7 +303,7 @@ align-items: center;
 
 
 
-/*--------------------------------------------- SE MERE KNAP */
+/*------------------------- SE MERE KNAP */
 
 
 .se_mere_container {
@@ -338,7 +339,7 @@ align-items: center;
 
 
 
-/*--------------------------------------------- Selve Popup */
+/*---------------------- POPUP */
 
 #popup {
   position: fixed;
@@ -425,7 +426,7 @@ margin-top: 5%;
 
 
 
-  /*--------------------------------------------- TOP 5 */
+  /*--------------------------------------------- TOP 5 SEKTION */
   .top5_container {
     display: none;
   }
@@ -451,7 +452,7 @@ text-transform: uppercase;
 
 
 
-/*--------------------------------------------- INSTAGRAM */
+/*--------------------------------------------- INSTAGRAM SEKTION*/
 
   .instagram_galleri{
     display: grid;
@@ -463,19 +464,6 @@ text-transform: uppercase;
 .instagram_container {
   display:none;
 }
-
-
-
-
-
-
-
-
-
-
-
-/*--------------------------------------------- FOOTER */
-
 
 
 
@@ -555,8 +543,7 @@ height: 8rem;
 
 
 
-
-/*--------------------------------------------- Selve Popup */
+/*--------------------------------------------- POPUP */
 
 
 #popup article{
@@ -597,15 +584,18 @@ main {
   margin-inline: 7rem;
 }  
 
-/* h1 {
-  font-size: 80px;
-} */
-
 h2 {
   margin-top: 0;
   text-align: left;
 }
 
+
+
+/*--------------------------------------------- LOKATION SEKTION */
+
+.lokation_buttons {
+  margin-inline: 3rem;
+  } 
 
 
 
@@ -624,6 +614,9 @@ font-size: 80%;
   margin-bottom: 5rem;
   display: contents;
 }
+
+
+/*--------------------------------------------- INSTAGRAM SEKTION*/
 
 
 .instagram_container {
@@ -647,7 +640,7 @@ margin-top: 7rem;
 }
 
 
-/*--------------------------------------------- Selve Popup */
+/*--------------------------------------------- POPUP */
 
 
 #popup article{
@@ -687,27 +680,13 @@ font-size: 50%;
 }
 
 
-/*--------------------------------------------- SORTER SEKTION */
 
-.sorter_buttons button {
-  font-size: 51%;
-}
-
-  .sorter_buttons {
-      grid-template-columns: 1fr 1fr;
-      }
-
-/*--------------------------------------------- LOKATION SEKTION */
-
-.lokation_buttons {
-    margin-inline: 3rem;
-    } 
-
-
-
-  
       
 }
+
+
+
+
 
 
 
@@ -720,6 +699,10 @@ font-size: 50%;
 
 
 @media (min-width: 1200px) { 
+
+
+  /*--------------------------------------------- LOKATION SEKTION */
+
   #nav {
     margin-inline: 10rem;
     margin-top: 2rem;
@@ -728,11 +711,16 @@ font-size: 50%;
       letter-spacing: 10px;    
     }
 
+  /*--------------------------------------------- SPISESTEDER SEKTION */
 
     #spisesteder_container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
+
+
+
+      /*--------------------------------------------- TOP 5 SEKTION */
 
     .top5_container h4 {
       font-size: 90%;
@@ -743,9 +731,11 @@ font-size: 50%;
       
       }
     
+
+      /*--------------------------------------------- POPUP */
+
       #popup article{ 
         top: 30%;
-
         width: 45rem;
       }
 

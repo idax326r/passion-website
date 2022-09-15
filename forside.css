@@ -147,6 +147,21 @@ h2 {
   color: var(--primary-color);
 }
 
+.h2_top5 {
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.p_top5 {
+  font-family: "Work Sans", sans-serif;
+  color: var(--primary-color);
+}
+
 h3 {
   font-size: 14px;
   font-family: "Abril Fatface", cursive;
@@ -157,11 +172,12 @@ h3 {
 }
 
 h4 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Work Sans", sans-serif;
   margin-bottom: 10px;
   margin-top: 10px;
   letter-spacing: 3px;
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 h5 {
@@ -215,5 +231,32 @@ h5 {
 
   .img_del_1 {
     margin-top: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  .toggle-btn {
+    display: block;
+    position: relative;
+    right: 35px;
+    top: -10px;
+  }
+  .main-menu {
+    display: contents;
+  }
+  .main-menu ul {
+    display: none;
+  }
+  .main-menu.shown ul {
+    gap: 10px;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    padding: 15px;
+  }
+  .banner hr {
+    display: none;
   }
 }
