@@ -15,75 +15,36 @@
     <link rel="icon" type="image/svg+xml" href="svg/logo.svg" />
     <title>blog</title>
 
-<style>
-  /*HEADER styling*/
-ul li {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
-}
-ul li:hover {
-  text-decoration: underline;
-}
-header a:hover,a:focus,a:active {
-  background-size: 100% 0.1em;
-}
-@media (max-width: 650px) {
-  .toggle-btn {
-    display: block;
-    position: relative;
-    right: 35px;
-    top: -10px;
-  }
-  .main-menu {
-    display: contents; 
-  }
-  .main-menu ul {
-    display: none; 
-  }
-  .main-menu.shown ul {
-    gap: 10px;
-    border-top: 1px solid var(--primary-color);
-    padding-top: 1rem;
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: column;
-    padding: 15px;
-  }
-  .banner hr {
-    display: none;
-  }
-}
+    <style>
+      /*HEADER styling*/
 
-/* FOOTER styling */
-.footer_line {
-  height: 1px;
-  background: var(--primary-color);
-  width: 85%;
-  margin: 0 auto;
-}
-.footer_flex {
-  display: flex;
-  justify-content: space-between;
-}
-.footer_left {
-  padding: 30px;
-  line-height: 25px;
-  /* place-self: start; */
-}
-.footer_right {
-  padding: 30px;
-  line-height: 25px;
-  /* place-self: start end; */
-  color: var(--primary-color);
-}
-.footer_rettigheder {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-}
-footer a:hover,a:focus,a:active {
-  background-size: 100% 0.1em;
-}
+      @media (max-width: 650px) {
+        .toggle-btn {
+          display: block;
+          position: relative;
+          right: 35px;
+          top: -10px;
+        }
+        .main-menu {
+          display: contents;
+        }
+        .main-menu ul {
+          display: none;
+        }
+        .main-menu.shown ul {
+          gap: 10px;
+          border-top: 1px solid var(--primary-color);
+          padding-top: 1rem;
+          display: flex;
+          flex: 1 1 100%;
+          flex-flow: column;
+          padding: 15px;
+        }
+        .banner hr {
+          display: none;
+        }
+      }
+
       body {
         background-color: #efeeea;
       }
@@ -96,7 +57,7 @@ footer a:hover,a:focus,a:active {
       #holder {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       }
 
       article {
@@ -109,162 +70,155 @@ footer a:hover,a:focus,a:active {
         z-index: -1;
       }
 
-      #tekst{
+      #tekst {
         background-color: white;
         margin-top: -90px;
-        color:#d67b21;
+        color: #d67b21;
         margin-top: -30%;
         margin-inline: 15px;
       }
-      h1{
+      h1 {
         overflow: hidden;
-  text-align: center;
-  color: var(--primary-color);
-  font-size: 35px;
-  font-family: "Abril Fatface", cursive;
-  margin-bottom: 70px;
-  margin-top: -10px;
-  letter-spacing: 18px;
+        text-align: center;
+        color: var(--primary-color);
+        font-size: 35px;
+        font-family: "Abril Fatface", cursive;
+        margin-bottom: 70px;
+        margin-top: -10px;
+        letter-spacing: 18px;
       }
-      h1:before,h1:after {
-  background-color: var(--primary-color);
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 40%;
-}
-      
-      
+      h1:before,
+      h1:after {
+        background-color: var(--primary-color);
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 40%;
+      }
 
-      h3{
+      h3 {
         padding: 10px;
         margin-bottom: 5px;
         font-family: "Work Sans", sans-serif;
         font-weight: 700;
       }
-     
-      button{
+
+      button {
         background-color: white;
         font-size: 0.6rem;
-      border: solid #d67b21 1px;
+        border: solid #d67b21 1px;
         position: relative;
         font-family: "Work Sans", sans-serif;
-        top:-8px;
+        top: -8px;
         left: 3px;
-        padding: 3px;        
+        padding: 3px;
       }
-      button:hover{
+      button:hover {
         background-color: #d67b21;
         color: white;
       }
-    
+
       @media (max-width: 850px) {
-        h1:before,h1:after {
-  background-color: var(--primary-color);
-  content: "";
-  display:none;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 40%;
-}
+        h1:before,
+        h1:after {
+          background-color: var(--primary-color);
+          content: "";
+          display: none;
+          height: 1px;
+          position: relative;
+          vertical-align: middle;
+          width: 40%;
+        }
       }
-</style>
-</head>
+    </style>
+  </head>
 
-<body>
-  <header class="banner">
-    <div class="logo">
-      <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
-    </div>
-    <nav class="main-menu">
-      <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
-      <ul>
-        <li><a href="spisesteder.html">Spisesteder</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li class="valgt"><a href="omos.html">Om os</a></li>
-      </ul>
-    </nav>
-  </header>
+  <body>
+    <header class="banner">
+      <div class="logo_header">
+        <a href="forside.html"><img src="svg/logo.svg" alt="logo" /></a>
+      </div>
+      <nav class="main-menu">
+        <button class="toggle-btn"><img src="svg/burgermenu.svg" alt="burgermenu" /></button>
+        <ul>
+          <li><a href="spisesteder.html">Spisesteder</a></li>
+          <li class="valgt"><a href="blog.html">Blog</a></li>
+          <li><a href="omos.html">Om os</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
 
-
-  <h1>BLOG</h1>
-<main id="holder"></main>
-<template>
-    <article>
-        <img src="" alt="">
-          <div id="tekst">
-            <h3 class="catchLine"></h3>
-            <button>LÆS ANMELDELSE</button>
-          </div>
+    <h1>BLOG</h1>
+    <main id="holder"></main>
+    <template>
+      <article>
+        <img src="" alt="" />
+        <div id="tekst">
+          <h3 class="catchLine"></h3>
+          <button>LÆS ANMELDELSE</button>
+        </div>
       </article>
-</template>
+    </template>
 
+    <footer>
+      <hr />
+      <div class="footer_flex">
+        <p class="footer_left">
+          The Delight Guide <br />
+          Copenhagen, DK <br />
+          + 45 23 45 67 89 <br />
+          info@delightguide.dk <br />
+          CVR 30302072
+        </p>
 
-<footer>
-  <div class="footer_line"></div>
-  <div class="footer_flex">
-    <p class="footer_left">
-      The Delight Guide <br />
-      Copenhagen, DK <br />
-      + 45 23 45 67 89 <br />
-      info@delightguide.dk <br />
-      CVR 30302072
-    </p>
-
-    <p class="footer_right">
-      Spisesteder <br />
-      Blog <br />
-      <a href="omos.html">Om os</a>
-    </p>
-  </div>
-
-  <div class="footer_rettigheder">
-    <p>© 2022 The Delight Guide. All Rights Reserved.</p>
-  </div>
-</footer>
-
+        <p class="footer_right">
+          <a href="spisesteder.html">Spisesteder</a><br />
+          <a href="blog.html">Blog</a><br />
+          <a href="omos.html">Om os</a>
+        </p>
+      </div>
+    </footer>
+    <div class="footer_rettigheder">
+      <p>© 2022 The Delight Guide. All Rights Reserved.</p>
+    </div>
 
     <script>
-        const endpoint="https://delight-6272.restdb.io/rest/restauranter";
-        const mereinfo={
-            headers:{
-                "x-apikey": "631b0361fdc15b0265f17265"
-            }
-        };
+      const endpoint = "https://delight-6272.restdb.io/rest/restauranter";
+      const mereinfo = {
+        headers: {
+          "x-apikey": "631b0361fdc15b0265f17265",
+        },
+      };
 
-        async function hentData(){
-        
-        const response=await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
-        const json=await response.json();
-        vis(json);}
+      async function hentData() {
+        const response = await fetch("https://delight-6272.restdb.io/rest/restauranter", mereinfo);
+        const json = await response.json();
+        vis(json);
+      }
 
-        function vis(json){
-            const holder =document.querySelector("#holder");
-            const skabelon = document.querySelector("template").content;
+      function vis(json) {
+        const holder = document.querySelector("#holder");
+        const skabelon = document.querySelector("template").content;
 
-            json.forEach(artikel => {
-                 
-            console.log(artikel);
-             const klon  =skabelon.cloneNode(true);
-             klon.querySelector("button").addEventListener("click",()=>visDetaljer(artikel));
-             klon.querySelector(".catchLine").textContent=artikel.overskrift;
-             klon.querySelector("img").src = "billeder/" + artikel.billednavn;
-             holder.appendChild(klon);
-            });
-        }
+        json.forEach((artikel) => {
+          console.log(artikel);
+          const klon = skabelon.cloneNode(true);
+          klon.querySelector("button").addEventListener("click", () => visDetaljer(artikel));
+          klon.querySelector(".catchLine").textContent = artikel.overskrift;
+          klon.querySelector("img").src = "billeder/" + artikel.billednavn;
+          holder.appendChild(klon);
+        });
+      }
 
       function visDetaljer(artikel) {
         console.log(artikel);
-        location.href=`blogindlæg.html?id=${artikel._id}`;
-        }
-            
-        hentData();
+        location.href = `blogindlæg.html?id=${artikel._id}`;
+      }
 
+      hentData();
     </script>
   </body>
-  
 </html>
-
