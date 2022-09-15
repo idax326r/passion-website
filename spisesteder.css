@@ -115,7 +115,7 @@ main {
 h1 {
   font-size: 50px;
   font-family: "Abril Fatface", cursive;
-  margin-bottom: 40px;
+  /* margin-bottom: 1rem; */
   text-align: center;
 }
 
@@ -160,23 +160,36 @@ margin-bottom: 1rem;
 
 
 /*--------------------------------------------- LOKATION SEKTION */
-
-/*her skal den hedder #nav*/
-
-.lokation_buttons {
+#nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    height: 21rem;
+    grid-template-columns: 1fr 1fr 1fr;    
+    column-gap: 28px;
+height: 16rem;
+margin-inline: 2rem;
+row-gap: 10px;
+margin-bottom: 5rem;
+margin-top: 2rem;
     }
     
+
+    #helekbh {
+      background-image: url(svg/helekbh.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #helekbh:hover {
+      background-image: url(svg/helekbh_hover.svg);
+
+    }
+
 
 .vesterbro {
     background-image: url(svg/vesterbro.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
-}
+    background-position: center;
+  }
 .vesterbro:hover {
     background-image: url(svg/vesterbro_hover.svg);
   }
@@ -186,8 +199,8 @@ margin-bottom: 1rem;
     background-image: url(svg/noerrebro.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
-}
+    background-position: center;
+  }
 .noerrebro:hover {
     background-image: url(svg/noerrebro_hover.svg);
   }
@@ -197,8 +210,8 @@ margin-bottom: 1rem;
     background-image: url(svg/frederiksberg.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
-}
+    background-position: center;
+  }
 .frederiksberg:hover {
     background-image: url(svg/frederiksberg_hover.svg);
   }
@@ -208,54 +221,28 @@ margin-bottom: 1rem;
     background-image: url(svg/koebenhavnk.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
-}
+    background-position: center;
+  }
 .koebenhavnk:hover {
     background-image: url(svg/koebenhavnk_hover.svg);
   }
 
+  .amager {
+    background-image: url(svg/amager.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.amager:hover {
+    background-image: url(svg/amager_hover.svg);
+  }
 
 
 
+ 
+  
 
 
-/*--------------------------------------------- SORTER SEKTION */
-
-    .sorter_container {
-        margin-bottom: 3rem;
-    }
-    
-
-    .sorter_buttons button{
-        color: #d67b21;
-        border: 2px;
-        padding: 8px 10px;
-        text-align: center;
-        padding: 3px 15px 3px 15px;
-        cursor: pointer;
-        border-style: solid;
-        font-family: "Work Sans", sans-serif;
-        font-weight: 500;
-        font-size: 0.8rem; 
-    }
-    .sorter_buttons button:hover {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-      }
-   
-
-    .sorter_buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    }
-    
-    .sortervalgt {
-      /* background-color: var(--primary-color); */
-      color: white;
-      border: none;  
-    }
 
 
 
@@ -264,7 +251,7 @@ margin-bottom: 1rem;
 #spisesteder_container {
 display: grid;
 grid-template-columns: 1fr;
-gap: 5px;
+gap: 1rem;
 }
 
 .spisesteder_box {
@@ -276,14 +263,16 @@ gap: 5px;
 .adresse_prisklasse {
 display: grid;
 grid-template-columns: 1fr 1fr;
-/* gap: 1.5rem; */
+gap: 1.5rem;
 font-size: 70%;
+align-items: center;
 
 }
 
-.prisklasse_container, .adresse_container {
+.prisklasse_container, .adresse_container, .service_container, .vibe_container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    
 }
 
 .adresse_prisklasse img {
@@ -320,7 +309,8 @@ font-size: 70%;
 
 .se_mere_container {
   display: flex;
-  justify-content: right;
+  justify-content: left;
+  margin-top: 2rem;
 }
 
 .se_mere {
@@ -367,14 +357,18 @@ font-size: 70%;
 #popup article{
   position: fixed;
   background-color: #E3E1D8;
-  width: 18rem;
+  margin-inline: 10%;
   padding: 1rem;
   height: 38rem;
-  top: 3%;
+  top: 8%;
 }
 
+.popup_billede_container {
+  /* display: flex;
+  justify-content: center; */
+}
 .billedurl{
-  max-width: 100%;
+  max-width: 15rem;
   margin-bottom: 0;
 }
 
@@ -420,6 +414,7 @@ margin-top: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
+  row-gap: 1rem;
 
   }
 
@@ -436,6 +431,10 @@ margin-top: 5%;
 
 
   /*--------------------------------------------- TOP 5 */
+  .top5_container {
+    display: none;
+  }
+
 
   .top5_container p {
     font-weight: lighter;
@@ -451,6 +450,9 @@ text-transform: uppercase;
 
   }
 
+  .top5_top5 {
+    margin-bottom: 5rem;
+    }
 
 
 
@@ -462,6 +464,10 @@ text-transform: uppercase;
  gap: 1rem;
  margin-bottom: 5rem; 
  }
+
+.instagram_container {
+  display:none;
+}
 
 
 
@@ -580,15 +586,15 @@ h1 {
 /*--------------------------------------------- LOKATION SEKTION */
 
 
-.lokation_buttons {
-        display: grid;
-        grid-template-rows: 1fr;
-        gap: 15px;
-        height: 9rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin-inline: 3rem;
-        }
 
+#nav {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;  
+  margin-inline: 2rem;
+row-gap: 10px;
+margin-bottom: 2rem;
+margin-top: 1rem;  
+height: 8rem;
+ }
 
 .vesterbro {
     background-position: center;
@@ -603,6 +609,41 @@ h1 {
 .koebenhavnk {
     background-position: center;
 }
+
+
+
+
+
+
+
+
+/*--------------------------------------------- Selve Popup */
+
+
+#popup article{
+  height: 20rem;
+  top: 30%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.se_mere_info {
+    display: grid;
+    justify-content: end;
+    justify-items: end;
+}
+.se_mere_info h2 {
+
+text-align: right;
+
+}
+.se_mere_info p {
+
+text-align: right;
+
+}
+
 
   }
 
@@ -641,15 +682,22 @@ font-size: 80%;
 }
 
 .top5_container {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  display: contents;
 }
+
+
+.instagram_container {
+  display:contents;
+}
+
 
 /*--------------------------------------------- SPISESTEDER SEKTION */
 
 .main_spisesteder {
   display: grid;
 grid-template-columns: 1fr 3fr;
-gap: 1rem;
+gap: 5rem;
 margin-top: 7rem;
 }
 
@@ -657,6 +705,46 @@ margin-top: 7rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+
+/*--------------------------------------------- Selve Popup */
+
+
+#popup article{
+  height: 20rem;
+  top: 30%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+.adr_pris_vibe_serv {
+  display: flex;
+  justify-items: end;
+  justify-content: end;
+  column-gap: 1.5rem;
+}
+
+
+.se_mere_info h2 {
+font-size: 300%;
+
+}
+
+.se_mere_info h5 {
+font-size: 50%;
+  
+  }
+
+.se_mere_info p {
+  font-size: 80%;
+
+}
+
+.se_mere_luk {
+  padding: 1px 20px 1px 20px;
+  margin-bottom: 3rem;
+
 }
 
 
@@ -693,8 +781,9 @@ margin-top: 7rem;
 
 
 @media (min-width: 1200px) { 
-  .lokation_buttons {
+  #nav {
     margin-inline: 10rem;
+    margin-top: 2rem;
     } 
     h1 {
       letter-spacing: 10px;    
@@ -715,6 +804,11 @@ margin-top: 7rem;
       
       }
     
+      #popup article{ 
+        top: 30%;
+
+        width: 45rem;
+      }
 
 
 }

@@ -117,12 +117,6 @@ h1 {
   padding: 35px;
 }
 
-hr {
-  border-bottom: 0.2px solid var(--primary-color);
-  width: 900px;
-  width: 100%;
-}
-
 .pil {
   background-image: url(svg/pil_icon.svg);
   background-size: contain;

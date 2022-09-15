@@ -23,9 +23,9 @@ body {
 img {
   max-width: 100%;
 }
-/* .valgt {
+.underline {
   text-decoration: underline;
-} */
+}
 
 h1 {
   color: var(--primary-color);
@@ -42,14 +42,13 @@ header {
 }
 
 footer {
+  padding: 2rem 2rem 0 2rem;
 }
 
-/* FOOTER */
-.footer_line {
-  height: 1px;
-  background: var(--primary-color);
-  width: 85%;
-  margin: 0 auto;
+hr {
+  border-bottom: 0.2px solid var(--primary-color);
+  width: 900px;
+  width: 100%;
 }
 
 .footer_flex {
