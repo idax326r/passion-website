@@ -37,7 +37,7 @@
               <nav id="nav">
                 <button data-lokation= "alle" id="helekbh" class="valgt"></button>
                 <button data-lokation= "Nørrebro" class="noerrebro"></button>
-                <button data-lokation= "Københavnk" class="koebenhavnk"></button>
+                <button data-lokation= "København K" class="koebenhavnk"></button>
                 <button data-lokation= "Vesterbro" class="vesterbro"></button>
                 <button data-lokation= "Amager" class="amager"></button>
                 <button data-lokation= "Frederiksberg" class="frederiksberg"></button>
@@ -128,7 +128,11 @@
 
         <div id="popup">
           <article class="articlepopup">
-              <img class="billedurl" src="" alt="">  
+            <div class="popup_billede_container">
+                            <img class="billedurl" src="" alt="">  
+
+            </div>
+
            
               <div class="se_mere_info">
                   <h2 class="navn"></h2>
@@ -156,9 +160,9 @@
                       <h5 class="service_popup"></h5>     
                       </div>
               </div>
-  
-              </div>
               <button class="se_mere_luk">Tilbage</button>  
+
+              </div>
 
           </article>
       </div>
@@ -321,7 +325,7 @@ popup.querySelector("h2").textContent = rettensData.navn;
 popup.querySelector("img").src = "billeder/" + rettensData.billednavn;
 popup.querySelector("p").textContent = rettensData.mad + rettensData.stedet;
 popup.querySelector(".prisniveau_popup").textContent = rettensData.prisniveau;
-popup.querySelector(".adresse_popup").textContent = rettensData.adresse;
+popup.querySelector(".adresse_popup").textContent = rettensData.gade;
 popup.querySelector(".service_popup").textContent = rettensData.service;
 popup.querySelector(".vibe_popup").textContent = rettensData.vibe;
 
