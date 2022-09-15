@@ -17,45 +17,6 @@ section {
   margin: 0 auto;
 }
 
-/* header */
-.banner {
-  padding: 2rem;
-  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-}
-.main-menu ul {
-  list-style: none;
-  padding: 0;
-  /* 2. Få elementerne til at stå ved siden af hinanden */
-  display: flex;
-  gap: 50px;
-  justify-content: end;
-}
-/* ----------- burgermenu -------------- */
-.toggle-btn {
-  background: transparent;
-  border: none;
-  min-width: 44px;
-  min-height: 44px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  display: none; /* Skjul knappen som standard */
-}
-.logo_header {
-  height: 100px;
-  width: 100px;
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.logo_header img {
-  height: auto;
-  width: 100%;
-}
-
 /* INDHOLD PÅ SIDEN */
 .stort_logo {
   display: block;
@@ -66,30 +27,6 @@ section {
   margin-top: 50px;
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  background-image: linear-gradient(#d67b21, #d67b21);
-  background-size: 0% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 0%;
-  background-repeat: no-repeat;
-  transition: background-size 0.2s ease-in-out;
-}
-
-header ul a:hover,
-a:focus,
-a:active {
-  background-size: 100% 0.1em;
-}
-
-.logo_header:hover,
-a:focus,
-a:active {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
 h1 {
   text-align: center;
   font-size: 35px;
@@ -97,25 +34,6 @@ h1 {
   margin-bottom: 20px;
   margin-top: 200px;
   letter-spacing: 18px;
-}
-
-/* header */
-.banner {
-  display: flex;
-  padding: 2rem;
-  /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: var(--primary-color);
-}
-.main-menu ul {
-  list-style: none;
-  padding: 0;
-  /* 2. Få elementerne til at stå ved siden af hinanden */
-  display: flex;
-  gap: 50px;
-  justify-content: end;
-  padding: 35px;
 }
 
 .pil {
